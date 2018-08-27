@@ -2,10 +2,10 @@ from common.generator.data_bender import *
 from common.misc.fileops import *
 NUM_OF_INPUT_PARTS = 8
 
-MAXLEN_INPUTS = 'maxlen_inputs'
-MAXLEN_LABELS = 'maxlen_labels'
+from plugins.expr_calc.normalizer import *
 
 def poly(plugin_name, coeff_arr):
+    abs_path_to_json_scratch_file = None
 
     def fn_calc(in_int):
         out_int = -20 - .15 * in_int + .125 * (in_int ** 2)
@@ -38,23 +38,19 @@ def poly(plugin_name, coeff_arr):
             outputs.append(str(round(out_int)))
 
         maxlen_inputs = get_maxlen_of_listitems(inputs)
-        inputs = normalize(inputs, maxlen_inputs)
-
         maxlen_labels = get_maxlen_of_listitems(outputs)
-        labels = normalize(outputs, maxlen_labels)
 
-        size_dict = {}
-        size_dict[MAXLEN_INPUTS] = maxlen_inputs
-        size_dict[MAXLEN_LABELS] = maxlen_labels
-        write_dict_to_file(abs_path_to_json_scratch_file, size_dict)
+        inputs, labels = normalize_sizes(inputs, maxlen_inputs, maxlen_labels, outputs)
+
+        save_sizes(abs_path_to_json_scratch_file, maxlen_inputs, maxlen_labels)
 
         return (inputs, labels)
 
+
+
     def fn_generate_data_given_input_strings_local(string_of_inputs):
-        nonlocal abs_path_to_json_scratch_file
-        size_dict = get_dict_from_json_file(abs_path_to_json_scratch_file)
-        maxlen_inputs = size_dict[MAXLEN_INPUTS]
-        maxlen_labels = size_dict[MAXLEN_LABELS]
+        nonlocal  abs_path_to_json_scratch_file
+        maxlen_inputs, maxlen_labels = get_sizes(abs_path_to_json_scratch_file)
 
         trimmed_input_strings = map(lambda s: s.strip(), string_of_inputs)
 
@@ -76,6 +72,7 @@ def poly(plugin_name, coeff_arr):
 
 
         return (norm_inp_str_arr, norm_out_str_arr)
+
 
 
     abs_path_to_json_scratch_file = get_abs_path('plugins/' + plugin_name + '/model_data/sizes.json')
