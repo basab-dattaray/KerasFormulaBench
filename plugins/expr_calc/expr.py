@@ -53,22 +53,32 @@ def poly(plugin_name, coeff_arr):
 
         return (inputs, labels)
 
-    def fn_generate_data_given_input(input_string):
+    def fn_generate_data_given_input(string_of_inputs):
         nonlocal abs_path_to_json_scratch_file
         size_dict = get_dict_from_json_file(abs_path_to_json_scratch_file)
         maxlen_inputs = size_dict[MAXLEN_INPUTS]
         maxlen_labels = size_dict[MAXLEN_LABELS]
 
-        trim_inp_str  = input_string.strip()
+        trimmed_input_strings = map(lambda s: s.strip(), string_of_inputs)
 
-        out_num = 0
-        for chr in trim_inp_str:
-            digit = int(chr)
-            out_num = out_num + fn_calc(digit)
+        # trim_inp_str  = input_string.strip()
 
-        out_str = str(round(out_num))
+        inp_str_arr = []
+        out_str_arr = []
+        for inp_str in trimmed_input_strings:
+            out_num = 0
+            for chr in inp_str:
+                digit = int(chr)
+                out_num = out_num + fn_calc(digit)
+            inp_str_arr.append(inp_str)
+            out_str = str(round(out_num))
+            out_str_arr.append(out_str)
 
-        return (trim_inp_str, out_str)
+        norm_inp_str_arr = normalize(inp_str_arr, maxlen_inputs)
+        norm_out_str_arr = normalize(out_str_arr, maxlen_labels)
+
+
+        return (norm_inp_str_arr, norm_out_str_arr)
 
 
     abs_path_to_json_scratch_file = get_abs_path('plugins/' + plugin_name + '/model_data/sizes.json')

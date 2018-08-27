@@ -21,10 +21,10 @@ def generate(plugin_name):
         inputs, outputs = fn_generate_data(num_samples)
         return (inputs, outputs)
 
-    def fn_generate_data_given_input(input_string):
+    def fn_generate_data_given_input(string_of_inputs):
         nonlocal fn_generate_data_given_input
 
-        return fn_generate_data_given_input(input_string)
+        return fn_generate_data_given_input(string_of_inputs)
 
     init()
 
