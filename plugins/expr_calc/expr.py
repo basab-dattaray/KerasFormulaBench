@@ -1,7 +1,4 @@
-import  numpy as np
-
-from common.misc.fileops import *
-from common.misc.data_bender import *
+from common.generator.data_bender import *
 from common.misc.fileops import *
 NUM_OF_INPUT_PARTS = 8
 
@@ -53,7 +50,7 @@ def poly(plugin_name, coeff_arr):
 
         return (inputs, labels)
 
-    def fn_generate_data_given_input(string_of_inputs):
+    def fn_generate_data_given_input_strings_local(string_of_inputs):
         nonlocal abs_path_to_json_scratch_file
         size_dict = get_dict_from_json_file(abs_path_to_json_scratch_file)
         maxlen_inputs = size_dict[MAXLEN_INPUTS]
@@ -83,7 +80,7 @@ def poly(plugin_name, coeff_arr):
 
     abs_path_to_json_scratch_file = get_abs_path('plugins/' + plugin_name + '/model_data/sizes.json')
 
-    return  fn_generate_data, fn_generate_data_given_input
+    return  fn_generate_data, fn_generate_data_given_input_strings_local
 
 
 if __name__ == '__main__':

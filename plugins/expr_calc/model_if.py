@@ -7,7 +7,7 @@ from six.moves import range
 from common.model.training_effort_management import *
 from common.model.model_storage import *
 
-from common.misc.data_bender import *
+from common.generator.data_bender import *
 from common.misc.fileops import *
 
 

@@ -13,7 +13,7 @@ from common.model.model_validation_mgr import *
 from plugins.constants import *
 
 def validate():
-    plugin_name, fn_get_data, fn_generate_data_given_input, fn_setup_model, fn_train_model, fn_train_on, fn_stop_training, fn_compile_model, fn_predict = mediation_mgr()
+    plugin_name, fn_get_data, fn_generate_data_given_input_strings, fn_setup_model, fn_train_model, fn_train_on, fn_stop_training, fn_compile_model, fn_predict = mediation_mgr()
 
     model = load_compiled_model(fn_compile_model, plugin_name)
 
@@ -22,11 +22,11 @@ def validate():
     # inp_str_arr = []
     # out_str_arr = []
     # for line in string_of_inputs:
-    #     inp_str, out_str = fn_generate_data_given_input(line)
+    #     inp_str, out_str = fn_generate_data_given_input_strings(line)
     #     inp_str_arr.append(inp_str)
     #     out_str_arr.append(out_str)
 
-    inp_str_arr, out_str_arr = fn_generate_data_given_input(string_of_inputs)
+    inp_str_arr, out_str_arr = fn_generate_data_given_input_strings(string_of_inputs)
 
 
 

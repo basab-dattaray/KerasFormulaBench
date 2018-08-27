@@ -1,4 +1,4 @@
-from common.misc.data_bender import *
+from common.generator.data_bender import *
 from common.misc.character_mgt import ctable
 
 class colors:
