@@ -1,0 +1,89 @@
+import  numpy as np
+
+from common.misc.fileops import *
+from common.misc.data_bender import *
+from common.misc.fileops import *
+NUM_OF_INPUT_PARTS = 8
+
+MAXLEN_INPUTS = 'maxlen_inputs'
+MAXLEN_LABELS = 'maxlen_labels'
+
+def poly(plugin_name, coeff_arr):
+
+    def fn_calc(in_int):
+        out_int = -20 - .15 * in_int + .125 * (in_int ** 2)
+        i = 0
+        for c in coeff_arr:
+            out_int += coeff_arr[i]
+        return out_int * 100
+
+    def fn_generate_one_sample(n):
+        out_int = 0
+        inp_array = []
+        for i in range(n):
+            randomInt = np.random.randint(10)
+            inp_array.append(randomInt)
+            out_int = out_int + fn_calc(randomInt)
+        return (inp_array, out_int)
+
+    def fn_generate_data(num_samples):
+        nonlocal  abs_path_to_json_scratch_file
+        inputs = []
+        outputs = []
+
+        for _ in range(num_samples):
+            inp_array, out_int = fn_generate_one_sample(NUM_OF_INPUT_PARTS)
+            inp_str = ''
+            for inp_item in inp_array:
+                s = str(inp_item)
+                inp_str = inp_str + s
+            inputs.append(inp_str)
+            outputs.append(str(round(out_int)))
+
+        maxlen_inputs = get_maxlen_of_listitems(inputs)
+        inputs = normalize(inputs, maxlen_inputs)
+
+        maxlen_labels = get_maxlen_of_listitems(outputs)
+        labels = normalize(outputs, maxlen_labels)
+
+        size_dict = {}
+        size_dict[MAXLEN_INPUTS] = maxlen_inputs
+        size_dict[MAXLEN_LABELS] = maxlen_labels
+        write_dict_to_file(abs_path_to_json_scratch_file, size_dict)
+
+        return (inputs, labels)
+
+    def fn_generate_data_given_input(input_string):
+        nonlocal abs_path_to_json_scratch_file
+        size_dict = get_dict_from_json_file(abs_path_to_json_scratch_file)
+        maxlen_inputs = size_dict[MAXLEN_INPUTS]
+        maxlen_labels = size_dict[MAXLEN_LABELS]
+
+        trim_inp_str  = input_string.strip()
+
+        out_num = 0
+        for chr in trim_inp_str:
+            digit = int(chr)
+            out_num = out_num + fn_calc(digit)
+
+        out_str = str(round(out_num))
+
+        return (trim_inp_str, out_str)
+
+
+    abs_path_to_json_scratch_file = get_abs_path('plugins/' + plugin_name + '/model_data/sizes.json')
+
+    return  fn_generate_data, fn_generate_data_given_input
+
+
+if __name__ == '__main__':
+    # abs_coeffs_file_path = get_abs_path('common/plugins/' + 'expr_calc' + 'model_data/COEFFS.TXT')
+    # inputs = get_lines_from_file(abs_coeffs_file_path)
+
+    fn_calc, fn_generate_one_sample, fn_generate_data = poly([6, -.5, .25])
+    input, label = fn_generate_one_sample(NUM_OF_INPUT_PARTS)
+    print(input, label)
+
+    inputs, outputs = fn_generate_data(3)
+
+    print(inputs, outputs)
