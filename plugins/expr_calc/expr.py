@@ -14,38 +14,6 @@ def poly(plugin_name, coeff_arr):
             out_int += coeff_arr[i]
         return out_int * 100
 
-    def fn_generate_one_sample(n):
-        out_int = 0
-        inp_array = []
-        for i in range(n):
-            randomInt = np.random.randint(10)
-            inp_array.append(randomInt)
-            out_int = out_int + fn_calc(randomInt)
-        return (inp_array, out_int)
-
-    def fn_generate_data2(num_samples):
-        nonlocal  abs_path_to_json_scratch_file
-        inputs = []
-        outputs = []
-
-        for _ in range(num_samples):
-            inp_array, out_int = fn_generate_one_sample(NUM_OF_INPUT_PARTS)
-            inp_str = ''
-            for inp_item in inp_array:
-                s = str(inp_item)
-                inp_str = inp_str + s
-            inputs.append(inp_str)
-            outputs.append(str(round(out_int)))
-
-        maxlen_inputs = get_maxlen_of_listitems(inputs)
-        maxlen_labels = get_maxlen_of_listitems(outputs)
-
-        inputs, labels = normalize_sizes(inputs, maxlen_inputs, maxlen_labels, outputs)
-
-        save_sizes(abs_path_to_json_scratch_file, maxlen_inputs, maxlen_labels)
-
-        return (inputs, labels)
-
 
     def fn_generate_data(num_samples):
         nonlocal  abs_path_to_json_scratch_file
@@ -107,14 +75,12 @@ def poly(plugin_name, coeff_arr):
         return out_str
 
     def fn_generate_data_given_input_strings_local(string_of_inputs):
-        # nonlocal  abs_path_to_json_scratch_file
         maxlen_inputs, maxlen_labels = get_sizes(abs_path_to_json_scratch_file)
 
         trimmed_input_strings = list( map(lambda s: s.strip(), string_of_inputs))
         fn_iterate = workit_file_generator_mgr(trimmed_input_strings)
 
         inp_str_arr, out_str_arr = create_set_of_inpstr_outstr_pairs(fn_iterate)
-
 
         norm_inp_str_arr = normalize(inp_str_arr, maxlen_inputs)
         norm_out_str_arr = normalize(out_str_arr, maxlen_labels)
