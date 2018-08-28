@@ -79,14 +79,15 @@ def poly(plugin_name, coeff_arr):
             yield inp_str, out_str
             i += 1
 
-
-    def input_from_work_it_file(inp_strings):
-        i = 0
-        while i < len(inp_strings):
-            inp_str = inp_strings[i]
-            out_str = inp_str_to_out_str(inp_str)
-            yield inp_str, out_str
-            i += 1
+    def workit_file_generator_mgr(inp_strings):
+        def workit_file_generator():
+            i = 0
+            while i < len(inp_strings):
+                inp_str = inp_strings[i]
+                out_str = inp_str_to_out_str(inp_str)
+                yield inp_str, out_str
+                i += 1
+        return workit_file_generator
 
     def inp_str_to_out_str(inp_str):
         out_num = 0
@@ -101,9 +102,9 @@ def poly(plugin_name, coeff_arr):
         maxlen_inputs, maxlen_labels = get_sizes(abs_path_to_json_scratch_file)
 
         trimmed_input_strings = list( map(lambda s: s.strip(), string_of_inputs))
-        fn_iterate = input_from_work_it_file(trimmed_input_strings)
+        fn_iterate = workit_file_generator_mgr(trimmed_input_strings)
 
-        inp_str_arr, out_str_arr = createI_set_inpstr_outstr_pairs(fn_iterate)
+        inp_str_arr, out_str_arr = create_set_of_inpstr_outstr_pairs(fn_iterate)
 
 
         norm_inp_str_arr = normalize(inp_str_arr, maxlen_inputs)
@@ -111,10 +112,10 @@ def poly(plugin_name, coeff_arr):
 
         return (norm_inp_str_arr, norm_out_str_arr)
 
-    def createI_set_inpstr_outstr_pairs(fn_iterate):
+    def create_set_of_inpstr_outstr_pairs(fn_iterate):
         inp_str_arr = []
         out_str_arr = []
-        for inp_str, out_str in fn_iterate:
+        for inp_str, out_str in fn_iterate():
             inp_str_arr.append(inp_str)
             out_str_arr.append(out_str)
 
