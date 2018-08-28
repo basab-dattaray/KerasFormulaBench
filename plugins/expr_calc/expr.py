@@ -47,9 +47,21 @@ def poly(plugin_name, coeff_arr):
         return (inputs, labels)
 
 
+    def input_from_work_it_file(input_strings):
+        i = 0
+        while i < len(input_strings):
+            inp_str = input_strings[i]
+            out_num = 0
+            for chr in inp_str:
+                digit = int(chr)
+                out_num = out_num + fn_calc(digit)
+            out_str = str(round(out_num))
+            yield inp_str, out_str
+            i += 1
+
 
     def fn_generate_data_given_input_strings_local(string_of_inputs):
-        nonlocal  abs_path_to_json_scratch_file
+        # nonlocal  abs_path_to_json_scratch_file
         maxlen_inputs, maxlen_labels = get_sizes(abs_path_to_json_scratch_file)
 
         trimmed_input_strings = map(lambda s: s.strip(), string_of_inputs)
@@ -58,22 +70,14 @@ def poly(plugin_name, coeff_arr):
 
         inp_str_arr = []
         out_str_arr = []
-        for inp_str in trimmed_input_strings:
-            out_num = 0
-            for chr in inp_str:
-                digit = int(chr)
-                out_num = out_num + fn_calc(digit)
+        for inp_str, out_str in input_from_work_it_file(string_of_inputs):
             inp_str_arr.append(inp_str)
-            out_str = str(round(out_num))
             out_str_arr.append(out_str)
 
         norm_inp_str_arr = normalize(inp_str_arr, maxlen_inputs)
         norm_out_str_arr = normalize(out_str_arr, maxlen_labels)
 
-
         return (norm_inp_str_arr, norm_out_str_arr)
-
-
 
     abs_path_to_json_scratch_file = get_abs_path('plugins/' + plugin_name + '/model_data/sizes.json')
 
