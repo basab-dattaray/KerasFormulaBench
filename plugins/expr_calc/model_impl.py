@@ -10,14 +10,7 @@ from common.model.model_storage import *
 from common.generator.data_bender import *
 from common.misc.fileops import *
 
-
 def model():
-
-    # fn_setup_model = None # IN: input_size, label_size SIDE_EFFECT: save _model
-    # fn_train_model = None # IN: num_of_iterations, Num_of_epochs, num_of_batches;  SIDE_EFFECT: save and load _model
-    # fn_train_on = None # IN: num_of_iterations  SIDE_EFFECT: save and load _model
-    # fn_stop_training = None #
-    # fn_predict = None # IN: in_str; OUT: out_str
 
     _model = None
     _stop_running = False
@@ -65,15 +58,17 @@ def model():
         _model.summary()
 
 
-    def fn_train_model(plugin_name, batch_size, num_of_iterations, num_of_epochs):
+    def fn_train_model(plugin_name, batch_size, num_of_iterations, num_of_epochs, save_after_n_iterations):
 
         nonlocal _model
         nonlocal _stop_running
         nonlocal  _x_train, _y_train,  _x_val, _y_val
+        abs_model_path = get_abs_path('plugins/' + plugin_name + '/model_data/model')
 
         early_stopping_call_back = TrainingContinuationCallback(fn_stop_training)
 
         for iteration in range(0, num_of_iterations):
+
             if (_stop_running):
                 break
                 # pass
@@ -86,8 +81,9 @@ def model():
                        validation_data=( _x_val, _y_val),
                        callbacks=[early_stopping_call_back],
                        verbose=1)
+            if iteration > 0 and iteration % save_after_n_iterations == 0:
+                save_model(abs_model_path, _model)
 
-        abs_model_path = get_abs_path('plugins/' + plugin_name + '/model_data/model')
         save_model(abs_model_path, _model)
 
     def fn_train_on():
@@ -105,10 +101,5 @@ def model():
     def fn_predict(in_str):
         out_str = None
         return out_str
-
-
-
-
-
 
     return (fn_setup_model, fn_train_model, fn_train_on, fn_stop_training, fn_compile_model, fn_predict)

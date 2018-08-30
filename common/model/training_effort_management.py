@@ -22,9 +22,6 @@ class TrainingContinuationCallback(Callback):
         info = (self._train_iteration, self._epoch, self._batch, logs)
         self._recent_epochs.add(info)
 
-
-
-
     def on_batch_begin(self, batch, logs):
         self._batch = batch
 

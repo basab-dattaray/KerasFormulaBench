@@ -9,26 +9,26 @@ def plugin_mgr():
 
     _plug_name = None
 
-    GENERATOR_IF = 'generator_if'
-    _plugin_module_GENERATOR_IF = None
+    GENERATOR_IMPL = 'generator_impl'
+    _plugin_module_GENERATOR_IMPL = None
 
-    MODEL_IF = 'model_if'
-    _plugin_module_MODEL_IF = None
+    MODEL_IMPL = 'model_impl'
+    _plugin_module_MODEL_IMPL = None
 
     def init():
-        nonlocal _plugin_module_GENERATOR_IF
-        nonlocal _plugin_module_MODEL_IF
+        nonlocal _plugin_module_GENERATOR_IMPL
+        nonlocal _plugin_module_MODEL_IMPL
         nonlocal _plug_name
         dict = get_dict_from_json_file('apps' + '/CONFIG.JSON')
         _plug_name = dict[PLUGIN_KEY]
-        _plugin_module_GENERATOR_IF = get_plug_module(_plug_name, GENERATOR_IF)
-        _plugin_module_MODEL_IF = get_plug_module(_plug_name, MODEL_IF)
+        _plugin_module_GENERATOR_IMPL = get_plug_module(_plug_name, GENERATOR_IMPL)
+        _plugin_module_MODEL_IMPL = get_plug_module(_plug_name, MODEL_IMPL)
 
     def fn_get_plugin_info():
-        nonlocal _plugin_module_GENERATOR_IF
-        nonlocal _plugin_module_MODEL_IF
+        nonlocal _plugin_module_GENERATOR_IMPL
+        nonlocal _plugin_module_MODEL_IMPL
         nonlocal _plug_name
-        return (_plug_name, _plugin_module_GENERATOR_IF, _plugin_module_MODEL_IF)
+        return (_plug_name, _plugin_module_GENERATOR_IMPL, _plugin_module_MODEL_IMPL)
 
     # def set_plugname(plug_name):
     #     file_path = "common/CONFIG.JSON"
