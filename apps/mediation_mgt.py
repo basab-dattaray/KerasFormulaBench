@@ -1,7 +1,7 @@
 from common.misc.plugin_mgt import *
 from common.generator.generator_mgt_if import *
 from common.model.model_mgt_if import *
-
+from apps.RUN_CONSTANTS import *
 
 def mediation_mgr():
 
@@ -29,7 +29,8 @@ def mediation_mgr():
         nonlocal fn_setup_model, fn_train_model, fn_train_on, fn_stop_training, fn_compile_model, fn_predict
 
         fn_get_data, fn_generate_data_given_input_strings = generator_mgr(_plugin_module_GENERATOR_MGT, _plugin_name)
-        fn_setup_model, fn_train_model, fn_train_on, fn_stop_training, fn_compile_model, fn_predict = model_mgr(_plugin_module_MODEL_MGT)
+        fn_setup_model, fn_train_model, fn_train_on, fn_stop_training, fn_compile_model, fn_predict \
+            = model_mgr(_plugin_module_MODEL_MGT, NUM_OF_ITERATIONS, NUM_ITERATIONS_FOR_SAVING_MODEL, NUM_OF_CONSECATIVE_ITERATION_DEGRADATIONS_FOR_OVERFITTING)
 
     init()
     setup_for_training()
