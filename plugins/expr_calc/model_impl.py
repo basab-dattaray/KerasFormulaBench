@@ -19,9 +19,13 @@ def model(plugin_name, num_of_iterations, save_after_n_iterations, num_of_iterat
     _x_val = None
     _y_val = None
 
+    _batch_size = None
+    _num_of_epochs = None
 
+    _abs_model_path = get_abs_path('plugins/' + plugin_name + '/model_data/model')
 
     def fn_setup_model(inputs, labels):
+
         nonlocal _model
         nonlocal _x_train, _y_train,  _x_val, _y_val
         _x_train,  _x_val, _y_train, _y_val = data_breaker(inputs, labels)
@@ -59,11 +63,13 @@ def model(plugin_name, num_of_iterations, save_after_n_iterations, num_of_iterat
 
 
     def fn_train_model(batch_size, num_of_epochs):
-
-        nonlocal _model
+        nonlocal _batch_size, _num_of_epochs
+        nonlocal _model, _abs_model_path
         nonlocal _stop_running
         nonlocal  _x_train, _y_train,  _x_val, _y_val
-        abs_model_path = get_abs_path('plugins/' + plugin_name + '/model_data/model')
+
+        _batch_size = batch_size
+        _num_of_epochs = num_of_epochs
 
         early_stopping_call_back = TrainingContinuationCallback(fn_stop_training)
 
@@ -82,11 +88,12 @@ def model(plugin_name, num_of_iterations, save_after_n_iterations, num_of_iterat
                        callbacks=[early_stopping_call_back],
                        verbose=1)
             if iteration > 0 and iteration % save_after_n_iterations == 0:
-                save_model(abs_model_path, _model)
+                save_model(_abs_model_path, _model)
 
-        save_model(abs_model_path, _model)
+        save_model(_abs_model_path, _model)
 
     def fn_train_on():
+        nonlocal _batch_size, _num_of_epochs
         pass
 
     def fn_stop_training():
