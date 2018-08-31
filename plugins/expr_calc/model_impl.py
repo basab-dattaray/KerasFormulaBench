@@ -28,38 +28,45 @@ def model(plugin_name, num_of_iterations, save_after_n_iterations, num_of_iterat
 
         nonlocal _model
         nonlocal _x_train, _y_train,  _x_val, _y_val
-        _x_train,  _x_val, _y_train, _y_val = data_breaker(inputs, labels)
+        _x_train, _x_val, _y_train, _y_val = data_breaker(inputs, labels)
 
-        input_size = len(inputs[0])
-        label_size = len(labels[0])
+        if is_model_usable(_abs_model_path):
+            _model = load_model(_abs_model_path)
 
-        HIDDEN_SIZE = 128
-        # BATCH_SIZE = 128
-        NUM_OF_HIDDEN_LAYERS = 1
-        print('Build _model...')
-        _model = Sequential()
-        # "Encode" the input sequence using an RNN, producing an output of HIDDEN_SIZE.
-        # Note: In a situation where your input sequences have a variable length,
-        # use input_shape=(None, num_feature).
-        _model.add(layers.LSTM(HIDDEN_SIZE, input_shape=(input_size, len(chars))))
-        # As the decoder RNN's input, repeatedly provide with the last hidden state of
-        # RNN for each time step. Repeat 'NUM_OF_DIGITS_IN_OPERAND + 1' times as that's the maximum
-        # length of output, e.g., when NUM_OF_DIGITS_IN_OPERAND=3, max output is 999+999=1998.
-        # _model.add(layers.RepeatVector(data_gen_dict['operand_size'] + 1))
-        _model.add(layers.RepeatVector(label_size))
-        # The decoder RNN could be multiple layers stacked or a single layer.
-        for _ in range(NUM_OF_HIDDEN_LAYERS):
-            # By setting return_sequences to True, return not only the last output but
-            # all the outputs so far in the form of (num_samples, timesteps,
-            # output_dim). This is necessary as TimeDistributed in the below expects
-            # the first dimension to be the timesteps.
-            _model.add(layers.LSTM(HIDDEN_SIZE, return_sequences=True))
-        # Apply a dense layer to the every temporal slice of an input. For each of step
-        # of the output sequence, decide which character should be chosen.
-        _model.add(layers.TimeDistributed(layers.Dense(len(chars))))
-        _model.add(layers.Activation('softmax'))
-        fn_compile_model(_model)
-        _model.summary()
+            fn_compile_model(_model)
+
+        else:
+
+            input_size = len(inputs[0])
+            label_size = len(labels[0])
+
+            HIDDEN_SIZE = 128
+            # BATCH_SIZE = 128
+            NUM_OF_HIDDEN_LAYERS = 1
+            print('Build _model...')
+            _model = Sequential()
+            # "Encode" the input sequence using an RNN, producing an output of HIDDEN_SIZE.
+            # Note: In a situation where your input sequences have a variable length,
+            # use input_shape=(None, num_feature).
+            _model.add(layers.LSTM(HIDDEN_SIZE, input_shape=(input_size, len(chars))))
+            # As the decoder RNN's input, repeatedly provide with the last hidden state of
+            # RNN for each time step. Repeat 'NUM_OF_DIGITS_IN_OPERAND + 1' times as that's the maximum
+            # length of output, e.g., when NUM_OF_DIGITS_IN_OPERAND=3, max output is 999+999=1998.
+            # _model.add(layers.RepeatVector(data_gen_dict['operand_size'] + 1))
+            _model.add(layers.RepeatVector(label_size))
+            # The decoder RNN could be multiple layers stacked or a single layer.
+            for _ in range(NUM_OF_HIDDEN_LAYERS):
+                # By setting return_sequences to True, return not only the last output but
+                # all the outputs so far in the form of (num_samples, timesteps,
+                # output_dim). This is necessary as TimeDistributed in the below expects
+                # the first dimension to be the timesteps.
+                _model.add(layers.LSTM(HIDDEN_SIZE, return_sequences=True))
+            # Apply a dense layer to the every temporal slice of an input. For each of step
+            # of the output sequence, decide which character should be chosen.
+            _model.add(layers.TimeDistributed(layers.Dense(len(chars))))
+            _model.add(layers.Activation('softmax'))
+            fn_compile_model(_model)
+            _model.summary()
 
 
     def fn_train_model(batch_size, num_of_epochs):

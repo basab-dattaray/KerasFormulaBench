@@ -1,7 +1,16 @@
 from keras.models import model_from_json
 from common.misc.fileops import *
+from os.path import exists
+
 
 # from plugins.expr_calc.model_if import compile_model
+
+def is_model_usable(path):
+    if not exists(path + '.json'):
+        return False
+    if not exists(path + '.h5'):
+        return False
+    return True
 
 def save_model(path, model):
     # serialize model to JSON
@@ -11,6 +20,7 @@ def save_model(path, model):
     # serialize weights to HDF5
     model.save_weights(path + ".h5")
     print("Saved model to disk")
+
 
 def load_model(path):
     # load json and create model
