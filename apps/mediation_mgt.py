@@ -25,12 +25,12 @@ def mediation_mgr():
         _plugin_name, _plugin_module_GENERATOR_MGT, _plugin_module_MODEL_MGT = get_plugin_info()
 
     def setup_for_training():
-        nonlocal fn_get_data, fn_generate_data_given_input_strings
+        nonlocal fn_get_data, fn_generate_data_given_input_strings, _plugin_name
         nonlocal fn_setup_model, fn_train_model, fn_train_on, fn_stop_training, fn_compile_model, fn_predict
 
         fn_get_data, fn_generate_data_given_input_strings = generator_mgr(_plugin_module_GENERATOR_MGT, _plugin_name)
         fn_setup_model, fn_train_model, fn_train_on, fn_stop_training, fn_compile_model, fn_predict \
-            = model_mgr(_plugin_module_MODEL_MGT, NUM_OF_ITERATIONS, NUM_ITERATIONS_FOR_SAVING_MODEL, NUM_OF_CONSECATIVE_ITERATION_DEGRADATIONS_FOR_OVERFITTING)
+            = model_mgr(_plugin_module_MODEL_MGT, _plugin_name, NUM_OF_ITERATIONS, NUM_ITERATIONS_FOR_SAVING_MODEL, NUM_OF_CONSECATIVE_ITERATION_DEGRADATIONS_FOR_OVERFITTING)
 
     init()
     setup_for_training()

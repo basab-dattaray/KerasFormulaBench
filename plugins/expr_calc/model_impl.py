@@ -10,7 +10,7 @@ from common.model.model_storage import *
 from common.generator.data_bender import *
 from common.misc.fileops import *
 
-def model(num_of_iterations, save_after_n_iterations, num_of_iteration_degradations_for_overfitting):
+def model(plugin_name, num_of_iterations, save_after_n_iterations, num_of_iteration_degradations_for_overfitting):
 
     _model = None
     _stop_running = False
@@ -58,7 +58,7 @@ def model(num_of_iterations, save_after_n_iterations, num_of_iteration_degradati
         _model.summary()
 
 
-    def fn_train_model(plugin_name, batch_size, num_of_epochs):
+    def fn_train_model(batch_size, num_of_epochs):
 
         nonlocal _model
         nonlocal _stop_running

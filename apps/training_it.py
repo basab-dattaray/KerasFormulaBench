@@ -19,7 +19,7 @@ inputs, labels = fn_get_data(num_samples=TRAINING_SIZE)
 
 fn_setup_model(inputs, labels)
 
-fn_train_model(plugin_name, BATCH_SIZE,  NUM_OF_EPOCHS)
+fn_train_model(BATCH_SIZE,  NUM_OF_EPOCHS)
 
 
 
