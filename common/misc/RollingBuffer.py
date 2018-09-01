@@ -9,6 +9,9 @@ class RollingBuffer(object):
         self._cursor = -1
         self._append_count = 0
 
+    def count(self):
+        return len(self.get_last_n(self._size))
+
     def add(self, obj):
         assert self._cursor < self._size
         self._append_count += 1

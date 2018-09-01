@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9ba551c-3c74-40e6-8fdb-82eab22ab1a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/plugins/test_1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/model/loss_mgt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/work_it.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/work_it.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/misc/RollingBuffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/misc/RollingBuffer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/model/training_effort_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/model/training_effort_management.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_tests/test_RollingBuffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/common_tests/test_rolling_buffer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common_tests/test_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/common_tests/test_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/expr_calc/model_data/model.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common_tests/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/common_tests/.pytest_cache/v/cache/nodeids" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common_tests/test_rolling_buffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/common_tests/test_rolling_buffer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_impl.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/expr_calc/model_impl.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,27 +30,27 @@
           <entry key="JSON" value="1" />
           <entry key="TXT" value="1" />
           <entry key="json" value="1" />
-          <entry key="py" value="38" />
+          <entry key="py" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="38" />
+          <entry key="Python" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="22" />
-          <entry key="py" value="2516" />
+          <entry key="py" value="2739" />
           <entry key="txt" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="107" />
-          <entry key="Python" value="2516" />
+          <entry key="Python" value="2739" />
         </counts>
       </usages-collector>
     </session>
@@ -61,22 +61,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/expr_calc/normalizer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/expr_calc/model_impl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5">
-              <caret line="88" column="27" lean-forward="true" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
+            <state relative-caret-position="110">
+              <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -87,12 +75,64 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common/model/training_effort_management.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+            <state relative-caret-position="110">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <marker date="1535791074826" expanded="true" signature="172:917" ph="..." />
+                <marker date="1535820930716" expanded="true" signature="114:117" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/misc/RollingBuffer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+              <folding>
+                <marker date="1535820503631" expanded="true" signature="187:320" ph="..." />
+                <marker date="1535820503631" expanded="true" signature="266:320" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common_tests/test_rolling_buffer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/RUN_CONSTANTS.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/work_it.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4">
+              <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/model/loss_mgt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -107,50 +147,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/misc/RollingBuffer.py">
+        <entry file="file://$PROJECT_DIR$/../../PYTHON_ENVS/p_3_6_6/lib/python3.6/site-packages/keras/engine/training_arrays.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="20" />
-              <folding>
-                <marker date="1535785710558" expanded="true" signature="187:250" ph="..." />
-              </folding>
+            <state relative-caret-position="110">
+              <caret line="141" selection-start-line="141" selection-end-line="141" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common_tests/test_misc.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/test_1.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common_tests/test_rolling_buffer.py">
+        <entry file="file://$PROJECT_DIR$/../../PYTHON_ENVS/p_3_6_6/lib/python3.6/site-packages/keras/engine/training.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common_tests/test_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common_tests/test_data_generator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
+            <state relative-caret-position="140">
+              <caret line="1036" selection-start-line="1036" selection-end-line="1036" />
             </state>
           </provider>
         </entry>
@@ -186,7 +195,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/common/generator/generator_mgt_if.py" />
-        <option value="$PROJECT_DIR$/apps/work_it.py" />
         <option value="$PROJECT_DIR$/plugins/expr_calc/generator_if.py" />
         <option value="$PROJECT_DIR$/plugins/expr_calc/normalizer.py" />
         <option value="$PROJECT_DIR$/plugins/expr_calc/expr.py" />
@@ -196,13 +204,15 @@
         <option value="$PROJECT_DIR$/apps/training_it.py" />
         <option value="$PROJECT_DIR$/common/model/model_mgt_if.py" />
         <option value="$PROJECT_DIR$/common/model/model_storage.py" />
-        <option value="$PROJECT_DIR$/apps/RUN_CONSTANTS.py" />
         <option value="$PROJECT_DIR$/common_tests/test_model.py" />
         <option value="$PROJECT_DIR$/common_tests/test_RollingBuffer.py" />
         <option value="$PROJECT_DIR$/common_tests/test_1.py" />
+        <option value="$PROJECT_DIR$/common/model/loss_mgt.py" />
+        <option value="$PROJECT_DIR$/apps/work_it.py" />
+        <option value="$PROJECT_DIR$/plugins/expr_calc/model_impl.py" />
+        <option value="$PROJECT_DIR$/apps/RUN_CONSTANTS.py" />
         <option value="$PROJECT_DIR$/common/misc/RollingBuffer.py" />
         <option value="$PROJECT_DIR$/common_tests/test_rolling_buffer.py" />
-        <option value="$PROJECT_DIR$/plugins/expr_calc/model_impl.py" />
         <option value="$PROJECT_DIR$/common/model/training_effort_management.py" />
       </list>
     </option>
@@ -341,22 +351,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_rolling_buffer.test_creation_buffer_size_1" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="validate_it" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="KerasFormulaBench" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/common_tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/apps" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_rolling_buffer.test_creation_buffer_size_1&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/apps/validate_it.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_rolling_buffer.test_creation_buffer_size_2_return_1" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_rolling_buffer.test_creation_buffer_size_2_add_2__return_2" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="KerasFormulaBench" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -367,7 +383,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_rolling_buffer.test_creation_buffer_size_2_return_1&quot;" />
+      <option name="_new_target" value="&quot;test_rolling_buffer.test_creation_buffer_size_2_add_2__return_2&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -403,18 +419,18 @@
     </configuration>
     <list>
       <item itemvalue="Python tests.pytest in test_rolling_buffer.py" />
-      <item itemvalue="Python tests.pytest for test_rolling_buffer.test_creation_buffer_size_1" />
-      <item itemvalue="Python tests.pytest for test_rolling_buffer.test_creation_buffer_size_2_return_1" />
       <item itemvalue="Python tests.pytest for test_rolling_buffer.test_reset" />
       <item itemvalue="Python.training_it" />
+      <item itemvalue="Python.validate_it" />
+      <item itemvalue="Python tests.pytest for test_rolling_buffer.test_creation_buffer_size_2_add_2__return_2" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.training_it" />
+        <item itemvalue="Python tests.pytest for test_rolling_buffer.test_creation_buffer_size_2_add_2__return_2" />
+        <item itemvalue="Python.validate_it" />
         <item itemvalue="Python tests.pytest in test_rolling_buffer.py" />
         <item itemvalue="Python tests.pytest for test_rolling_buffer.test_reset" />
-        <item itemvalue="Python tests.pytest for test_rolling_buffer.test_creation_buffer_size_2_return_1" />
-        <item itemvalue="Python tests.pytest for test_rolling_buffer.test_creation_buffer_size_1" />
       </list>
     </recent_temporary>
   </component>
@@ -461,12 +477,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_for_test_1_test_creation_buffer_size_1 - 2018.09.01 at 00h 04m 21s.xml">
-      <configuration name="pytest for test_1.test_creation_buffer_size_1" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_rolling_buffer_py - 2018.09.01 at 00h 05m 25s.xml">
-      <configuration name="pytest in test_rolling_buffer.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_for_test_rolling_buffer_test_blank - 2018.09.01 at 00h 06m 04s.xml">
       <configuration name="pytest for test_rolling_buffer.test_blank" configurationId="tests" />
     </history-entry>
@@ -491,22 +501,29 @@
     <history-entry file="pytest_in_test_rolling_buffer_py - 2018.09.01 at 00h 43m 13s.xml">
       <configuration name="pytest in test_rolling_buffer.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_for_test_rolling_buffer_test_creation_buffer_size_2_add_2__return_2 - 2018.09.01 at 09h 48m 24s.xml">
+      <configuration name="pytest for test_rolling_buffer.test_creation_buffer_size_2_add_2__return_2" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_for_test_rolling_buffer_test_creation_buffer_size_2_add_2__return_2 - 2018.09.01 at 09h 50m 53s.xml">
+      <configuration name="pytest for test_rolling_buffer.test_creation_buffer_size_2_add_2__return_2" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="12" y="31" width="1632" height="905" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49904397" visible="true" weight="0.24339622" />
       <window_info id="Structure" order="1" sideWeight="0.500956" side_tool="true" weight="0.24339622" />
       <window_info id="Favorites" order="2" sideWeight="0.500956" side_tool="true" weight="0.24339622" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.69240505" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.2987342" />
+      <window_info anchor="bottom" id="Run" order="1" weight="0.4050633" />
+      <window_info active="true" anchor="bottom" id="Debug" order="2" visible="true" weight="0.51898736" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.3278481" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3288835" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.31796116" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.31772152" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.3288835" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -543,26 +560,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/validate_it.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/work_it.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../PYTHON_ENVS/p_3_6_6/lib/python3.6/site-packages/keras/engine/training_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
@@ -672,13 +669,6 @@
     <entry file="file://$PROJECT_DIR$/plugins/expr_calc/model_data/COEFFS.TXT">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../PYTHON_ENVS/p_3_6_6/lib/python3.6/site-packages/keras/engine/training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="949" selection-start-line="949" selection-end-line="949" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/training_it.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -697,13 +687,6 @@
             <element signature="e#0#40#0" expanded="true" />
             <marker date="1535695705661" expanded="true" signature="186:314" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/RUN_CONSTANTS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -754,20 +737,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/misc/RollingBuffer.py">
+    <entry file="file://$PROJECT_DIR$/apps/validate_it.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="281">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
-            <marker date="1535785710558" expanded="true" signature="187:250" ph="..." />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common_tests/test_rolling_buffer.py">
+    <entry file="file://$PROJECT_DIR$/apps/work_it.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        <state relative-caret-position="4">
+          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/model/loss_mgt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/expr_calc/model_impl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="95" column="32" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/RUN_CONSTANTS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -778,23 +788,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/expr_calc/model_impl.py">
+    <entry file="file://$PROJECT_DIR$/../../PYTHON_ENVS/p_3_6_6/lib/python3.6/site-packages/keras/engine/training_arrays.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="88" column="27" lean-forward="true" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
+        <state relative-caret-position="110">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PYTHON_ENVS/p_3_6_6/lib/python3.6/site-packages/keras/engine/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="1036" selection-start-line="1036" selection-end-line="1036" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common_tests/test_rolling_buffer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/misc/RollingBuffer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <marker date="1535820503631" expanded="true" signature="187:320" ph="..." />
+            <marker date="1535820503631" expanded="true" signature="266:320" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/model/training_effort_management.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+        <state relative-caret-position="110">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
-            <marker date="1535791074826" expanded="true" signature="172:917" ph="..." />
+            <marker date="1535820930716" expanded="true" signature="114:117" ph="..." />
           </folding>
         </state>
       </provider>

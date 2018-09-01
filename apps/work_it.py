@@ -19,12 +19,6 @@ def validate():
 
     abs_input_file_path = get_abs_path('plugins/' + plugin_name + '/WORK_IT.TXT')
     string_of_inputs = get_lines_from_file(abs_input_file_path)
-    # inp_str_arr = []
-    # out_str_arr = []
-    # for line in string_of_inputs:
-    #     inp_str, out_str = fn_generate_data_given_input_strings(line)
-    #     inp_str_arr.append(inp_str)
-    #     out_str_arr.append(out_str)
 
     inp_str_arr, out_str_arr = fn_generate_data_given_input_strings(string_of_inputs)
 

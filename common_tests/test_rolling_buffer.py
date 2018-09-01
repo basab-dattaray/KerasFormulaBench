@@ -48,6 +48,7 @@ def test_creation_buffer_size_2_add_2__return_2():
     assert list2[0] == 102
     assert list2[1] == 101
     assert list2.__len__() == 2
+    assert rb.count() == 2
 
 def test_creation_buffer_size_3_add_3_return_2():
     rb = RollingBuffer(3)
