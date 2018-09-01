@@ -1,8 +1,8 @@
 from keras.callbacks import Callback
+#
+# from common.misc.RollingBuffer import *
 
-from common.misc.RollingBuffer import *
-
-from common.model.loss_mgt import *
+from common.model.overfit_mgt import *
 
 
 class TrainingContinuationCallback(Callback):
@@ -17,26 +17,20 @@ class TrainingContinuationCallback(Callback):
         self._train_iteration = 0
         self._batch = -1
         self._epoch = -1
-        self._recent_epochs_to_track = RollingBuffer(recent_epochs_buffer_size)
-        self.fn_direction = loss_mgr()
+        self.fn_is_overfitting = overfit_mgr()
+        # self._recent_epochs_to_track = RollingBuffer(recent_epochs_buffer_size)
+        # self.fn_direction = loss_mgr()
 
 
     def on_epoch_begin(self, epoch, logs):
         self._epoch = epoch
 
     def on_epoch_end(self, epoch, logs):
-        val_loss_direction, changed_val_loss_direction = self.fn_direction(logs)
-        val_loss = logs[VAL_LOSS]
-        print('val_loss => {}::    DIRECTION => {} and CHANGED_DIRECTION => {}'.format(val_loss, val_loss_direction, changed_val_loss_direction))
-
         info = (self._train_iteration, self._epoch, self._batch, logs)
+        is_overfitting = self.fn_is_overfitting(info)
 
-        if val_loss_direction > 0 and changed_val_loss_direction == True:
-            self._recent_epochs_to_track.reset()
-        if val_loss_direction > 0:
-            self._recent_epochs_to_track.add(info)
-            if self._recent_epochs_to_track.count() > 1:
-                print('epochs tracked = {}'.format(self._recent_epochs_to_track.count()))
+        if is_overfitting:
+            print(is_overfitting)
 
 
     def on_batch_begin(self, batch, logs):
@@ -49,8 +43,9 @@ class TrainingContinuationCallback(Callback):
         self._train_iteration += 1
 
     def on_train_end(self, logs):
+        pass
 
-        x = self._recent_epochs_to_track.get_last_n(12)
-
-        x = None
+        # x = self._recent_epochs_to_track.get_last_n(12)
+        #
+        # x = None
 
