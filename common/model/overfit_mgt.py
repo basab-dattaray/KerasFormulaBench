@@ -17,10 +17,8 @@ def overfit_mgr():
             _recent_epochs_to_track.reset()
         if val_loss_direction > 0:
             _recent_epochs_to_track.add(info)
-            if _recent_epochs_to_track.count() > 1:
-                print('epochs tracked = {}'.format(_recent_epochs_to_track.count()))
-
-
-        return True
+            if _recent_epochs_to_track.count() > MAX_CONSECUTIVE_LOSS_DEGRATION_COUNT:
+                return True
+        return False
 
     return fn_is_overfitting

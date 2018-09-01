@@ -18,8 +18,6 @@ class TrainingContinuationCallback(Callback):
         self._batch = -1
         self._epoch = -1
         self.fn_is_overfitting = overfit_mgr()
-        # self._recent_epochs_to_track = RollingBuffer(recent_epochs_buffer_size)
-        # self.fn_direction = loss_mgr()
 
 
     def on_epoch_begin(self, epoch, logs):
@@ -31,6 +29,8 @@ class TrainingContinuationCallback(Callback):
 
         if is_overfitting:
             print(is_overfitting)
+            self._fn_stop_training()
+
 
 
     def on_batch_begin(self, batch, logs):
