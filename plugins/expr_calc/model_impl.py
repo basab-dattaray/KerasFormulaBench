@@ -93,7 +93,7 @@ def model(plugin_name, num_of_iterations, save_after_n_iterations, num_of_iterat
                        epochs=num_of_epochs,
                        validation_data=( _x_val, _y_val),
                        callbacks=[early_stopping_call_back],
-                       verbose=1)
+                       verbose=0)
             if iteration > 0 and iteration % save_after_n_iterations == 0:
                 save_model(_abs_model_path, _model)
 

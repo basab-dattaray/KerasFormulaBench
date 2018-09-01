@@ -1,5 +1,8 @@
 from common.misc.RollingBuffer import *
 
+def test_blank():
+    assert True
+
 def test_creation_buffer_size_1():
     rb = RollingBuffer(1)
     rb.add(101)
@@ -8,6 +11,22 @@ def test_creation_buffer_size_1():
     rb.add(102)
     list2 = rb.get_last_n(1)
     assert list2[0] == 102
+
+def test_reset():
+    rb = RollingBuffer(1)
+    rb.add(101)
+    list = rb.get_last_n(1)
+    assert list[0] == 101
+    rb.add(102)
+    list2 = rb.get_last_n(1)
+    assert list2[0] == 102
+    rb.reset()
+    list3 = rb.get_last_n(5)
+    assert len(list3) == 0
+    rb.add(111)
+    list4 = rb.get_last_n(5)
+    assert len(list4) == 1
+    assert list4[0] == 111
 
 def test_creation_buffer_size_2_return_1():
     rb = RollingBuffer(2)

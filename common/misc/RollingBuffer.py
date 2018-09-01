@@ -3,6 +3,9 @@ class RollingBuffer(object):
         assert size > 0
         self._list =  [None] * size
         self._size = size
+        self.reset()
+
+    def reset(self):
         self._cursor = -1
         self._append_count = 0
 

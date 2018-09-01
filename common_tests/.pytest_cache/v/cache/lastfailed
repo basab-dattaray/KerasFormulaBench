@@ -1,0 +1,7 @@
+{
+  "test_1.py::test_creation_buffer_size_1": true,
+  "test_1.py::test_creation_buffer_size_2_add_2__return_2": true,
+  "test_1.py::test_creation_buffer_size_2_return_1": true,
+  "test_1.py::test_creation_buffer_size_3_add_3_return_2": true,
+  "test_1.py::test_creation_buffer_size_3_add_5_return_2": true
+}

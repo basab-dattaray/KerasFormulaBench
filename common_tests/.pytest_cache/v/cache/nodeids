@@ -1,0 +1,9 @@
+[
+  "test_rolling_buffer.py::test_blank",
+  "test_rolling_buffer.py::test_creation_buffer_size_1",
+  "test_rolling_buffer.py::test_reset",
+  "test_rolling_buffer.py::test_creation_buffer_size_2_return_1",
+  "test_rolling_buffer.py::test_creation_buffer_size_2_add_2__return_2",
+  "test_rolling_buffer.py::test_creation_buffer_size_3_add_3_return_2",
+  "test_rolling_buffer.py::test_creation_buffer_size_3_add_5_return_2"
+]

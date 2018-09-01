@@ -1,7 +1,7 @@
 import os
 
 
-from common.model_mgt import load_model, save_model
+from common.model.model_storage import load_model, save_model
 
 DATA_PATH = "data/"
 DATA_MODEL = DATA_PATH + "model"
