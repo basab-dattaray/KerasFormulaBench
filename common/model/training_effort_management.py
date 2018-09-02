@@ -8,16 +8,13 @@ from common.model.overfit_mgt import *
 class TrainingContinuationCallback(Callback):
 
 
-    def __init__(self, fn_stop_training, monitor='loss', value=0.01, verbose=0, recent_epochs_buffer_size = 10):
+    def __init__(self, fn_stop_training, model, plugin_name):
         super(Callback, self).__init__()
-        self._monitor = monitor
-        self._value = value
-        self._verbose = verbose
-        self._fn_stop_training = fn_stop_training
+
         self._train_iteration = 0
         self._batch = -1
         self._epoch = -1
-        self.fn_is_overfitting, self.fn_stop_and_clean = overfit_mgr()
+        self.fn_is_overfitting, self.fn_stop_and_clean = overfit_mgr(fn_stop_training, model, plugin_name)
 
 
     def on_epoch_begin(self, epoch, logs):
@@ -29,7 +26,7 @@ class TrainingContinuationCallback(Callback):
 
         if is_overfitting:
             print(is_overfitting)
-            self.fn_stop_and_clean(self._fn_stop_training)
+            self.fn_stop_and_clean()
 
 
     def on_batch_begin(self, batch, logs):

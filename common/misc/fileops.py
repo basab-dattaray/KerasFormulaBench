@@ -1,6 +1,25 @@
 import os
 import json
 from pathlib import Path
+import shutil
+import datetime
+
+def get_filename_based_on_time():
+    s = str(datetime.datetime.now())
+    fname = s.replace(':', '-')
+    return fname
+
+def get_file_modification_datetime(filename_path):
+    t = os.path.getmtime(filename_path)
+    return datetime.datetime.fromtimestamp(t)
+
+def move_and_override_file(src_file_path, dst_dir_path):
+    if not os.path.exists(dst_dir_path):
+        os.makedirs(dst_dir_path)
+        dst_file = os.path.join(dst_dir_path, src_file_path)
+        if os.path.exists(dst_file):
+            os.remove(dst_file)
+        shutil.move(src_file_path, dst_dir_path)
 
 def get_dict_from_json_file(json_path):
     dict = {}
@@ -44,9 +63,9 @@ def get_lines_from_file(rel_file_path):
     return result
 
 
-def get_abs_path(json_path):
+def get_abs_path(relative_path):
     try:
-        path, file_name = json_path.rsplit('/', 1)
+        path, file_name = relative_path.rsplit('/', 1)
         d = os.getcwd()
         parent_path = Path(d).parent
         folder_path = os.path.join(str(parent_path), path)

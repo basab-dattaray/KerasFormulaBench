@@ -78,7 +78,7 @@ def model(plugin_name, num_of_iterations, save_after_n_iterations, num_of_iterat
         _batch_size = batch_size
         _num_of_epochs = num_of_epochs
 
-        early_stopping_call_back = TrainingContinuationCallback(fn_stop_training)
+        early_stopping_call_back = TrainingContinuationCallback(fn_stop_training, _model, plugin_name)
 
         for iteration in range(0, num_of_iterations):
 
