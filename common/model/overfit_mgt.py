@@ -21,4 +21,8 @@ def overfit_mgr():
                 return True
         return False
 
-    return fn_is_overfitting
+    def fn_stop_and_clean(_fn_stop_training):
+        _fn_stop_training()
+
+
+    return (fn_is_overfitting, fn_stop_and_clean)

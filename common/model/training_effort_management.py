@@ -17,7 +17,7 @@ class TrainingContinuationCallback(Callback):
         self._train_iteration = 0
         self._batch = -1
         self._epoch = -1
-        self.fn_is_overfitting = overfit_mgr()
+        self.fn_is_overfitting, self.fn_stop_and_clean = overfit_mgr()
 
 
     def on_epoch_begin(self, epoch, logs):
@@ -29,8 +29,7 @@ class TrainingContinuationCallback(Callback):
 
         if is_overfitting:
             print(is_overfitting)
-            self._fn_stop_training()
-
+            self.fn_stop_and_clean(self._fn_stop_training)
 
 
     def on_batch_begin(self, batch, logs):

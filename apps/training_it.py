@@ -9,9 +9,6 @@ import atexit
 def goodbye():
     print ("You are now leaving the Python sector.")
 
-
-
-
 plugin_name, fn_get_data, fn_generate_data_given_input_strings,fn_setup_model, fn_train_model, fn_train_on, fn_stop_training, fn_compile_model, fn_predict \
     = mediation_mgr()
 
