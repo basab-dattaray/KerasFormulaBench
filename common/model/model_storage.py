@@ -14,6 +14,10 @@ def is_model_usable(path):
 
 def save_model(path, model):
     # serialize model to JSON
+    base_folder = path.rsplit('/', 1)[0]
+    if not os.path.exists(base_folder):
+        os.makedirs(base_folder)
+
     model_json = model.to_json()
     with open(path + ".json", "w") as json_file:
         json_file.write(model_json)
