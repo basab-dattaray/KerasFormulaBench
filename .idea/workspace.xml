@@ -2,35 +2,82 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9ba551c-3c74-40e6-8fdb-82eab22ab1a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/common/model/archive/09-12-13.271294.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/model/archive/09-12-13.271294.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/model/model_storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/model/model_storage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/09-35-52.112686.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/09-35-52.112686.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/09-38-34.131728.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/09-38-34.131728.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/09-39-01.670066.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/09-39-01.670066.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/09-39-16.406769.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/09-39-16.406769.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-50-06.953274.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-50-06.953274.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-52-14.461294.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-52-14.461294.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-54-04.098760.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-54-04.098760.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-54-18.860221.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-54-18.860221.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-54-33.511404.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-54-33.511404.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-54-48.147211.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-54-48.147211.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-55-02.876760.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-55-02.876760.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-55-17.562594.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-55-17.562594.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-55-24.902749.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 10-55-24.902749.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/misc/RollingBuffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/misc/RollingBuffer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/misc/fileops.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/misc/fileops.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/model/MODEL_MGT_PARAMS.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/model/MODEL_MGT_PARAMS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/model/overfit_mgt.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/model/overfit_mgt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/model/training_effort_management.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/model/training_effort_management.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-43-18.914213.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-43-18.914213.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-43-33.940598.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-43-33.940598.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-43-49.168533.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-43-49.168533.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-43-56.715424.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-43-56.715424.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-52-03.828130.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-52-03.828130.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-52-18.826683.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-52-18.826683.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-52-40.838492.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-52-40.838492.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-52-48.121395.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-52-48.121395.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-53-17.184678.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-53-17.184678.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-53-39.191551.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-53-39.191551.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-53-46.778811.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-53-46.778811.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-53-53.917468.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-53-53.917468.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-54-15.550923.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-54-15.550923.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-54-43.952129.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-54-43.952129.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-55-05.275814.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-55-05.275814.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-55-26.459102.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-55-26.459102.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-55-33.591664.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-55-33.591664.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-56-09.057088.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-56-09.057088.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-56-16.138875.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-56-16.138875.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-56-44.511883.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-56-44.511883.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-56-58.731293.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-56-58.731293.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-57-26.983243.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-57-26.983243.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-57-48.182777.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-57-48.182777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-58-09.449956.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-58-09.449956.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-58-23.568583.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-58-23.568583.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-58-30.585855.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-58-30.585855.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-58-37.660312.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-58-37.660312.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-59-12.980267.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-59-12.980267.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-59-34.216017.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-59-34.216017.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-59-41.356105.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-59-41.356105.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-59-55.504915.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 11-59-55.504915.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 12-00-16.858574.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 12-00-16.858574.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 12-00-31.943104.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 12-00-31.943104.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 12-00-39.521848.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-02 12-00-39.521848.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/expr_calc/model_data/model.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/sizes.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/expr_calc/model_data/sizes.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,27 +98,27 @@
           <entry key="JSON" value="1" />
           <entry key="TXT" value="1" />
           <entry key="json" value="2" />
-          <entry key="py" value="55" />
+          <entry key="py" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="3" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="55" />
+          <entry key="Python" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="29" />
-          <entry key="py" value="3819" />
+          <entry key="py" value="5087" />
           <entry key="txt" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="114" />
-          <entry key="Python" value="3819" />
+          <entry key="Python" value="5087" />
         </counts>
       </usages-collector>
     </session>
@@ -84,12 +131,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/model/training_effort_management.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+            <state relative-caret-position="118">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
-                <marker date="1535910815529" expanded="true" signature="120:123" ph="..." />
-                <marker date="1535910815529" expanded="true" signature="1039:1062" ph="..." />
+                <marker date="1535957711924" expanded="true" signature="120:122" ph="..." />
               </folding>
             </state>
           </provider>
@@ -98,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/expr_calc/model_impl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="80" selection-start-line="80" selection-end-line="80" />
+            <state relative-caret-position="118">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -108,49 +154,64 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/model/overfit_mgt.py">
+        <entry file="file://$PROJECT_DIR$/../../PYTHON_ENVS/p_3_6_6/lib/python3.6/site-packages/keras/callbacks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-                <marker date="1535905562248" expanded="true" signature="489:638" ph="..." />
-                <marker date="1535905562248" expanded="true" signature="666:675" ph="..." />
-              </folding>
+            <state relative-caret-position="118">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/model/loss_mgt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common/model/overfit_mgt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="64" column="47" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+                <marker date="1536006303559" expanded="true" signature="848:986" ph="..." />
+                <marker date="1536006303559" expanded="true" signature="2023:2388" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/model/model_storage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+            <state relative-caret-position="288">
+              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-                <marker date="1535913487826" expanded="true" signature="186:314" ph="..." />
+                <marker date="1535913777337" expanded="true" signature="186:314" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common_tests/test_model.py">
+        <entry file="file://$PROJECT_DIR$/common/misc/RollingBuffer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="224">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../PYTHON_ENVS/p_3_6_6/lib/python3.6/site-packages/pkg_resources/__init__.py">
+        <entry file="file://$PROJECT_DIR$/apps/RUN_CONSTANTS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="1471" column="9" selection-start-line="1471" selection-start-column="9" selection-end-line="1471" selection-end-column="9" />
+            <state relative-caret-position="45">
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -158,24 +219,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/misc/fileops.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="258">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1535910573726" expanded="true" signature="111:199" ph="..." />
-                <marker date="1535910573726" expanded="true" signature="393:649" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/work_it.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
+                <marker date="1536005249956" expanded="true" signature="368:398" ph="..." />
+                <marker date="1536005249956" expanded="true" signature="431:519" ph="..." />
+                <marker date="1536005249956" expanded="true" signature="728:1089" ph="..." />
               </folding>
             </state>
           </provider>
@@ -184,8 +234,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/common/model/MODEL_MGT_PARAMS.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+            <state>
+              <caret column="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -233,24 +283,23 @@
         <option value="$PROJECT_DIR$/common_tests/test_1.py" />
         <option value="$PROJECT_DIR$/apps/work_it.py" />
         <option value="$PROJECT_DIR$/apps/RUN_CONSTANTS.py" />
-        <option value="$PROJECT_DIR$/common/misc/RollingBuffer.py" />
         <option value="$PROJECT_DIR$/common_tests/test_rolling_buffer.py" />
         <option value="$PROJECT_DIR$/common/model/loss_mgt.py" />
         <option value="$PROJECT_DIR$/common/model/MODEL_MGT.TXT.py" />
         <option value="$PROJECT_DIR$/apps/training_it.py" />
-        <option value="$PROJECT_DIR$/common/model/MODEL_MGT_PARAMS.py" />
         <option value="$PROJECT_DIR$/plugins/expr_calc/model_impl.py" />
-        <option value="$PROJECT_DIR$/common/model/overfit_mgt.py" />
-        <option value="$PROJECT_DIR$/common/misc/fileops.py" />
-        <option value="$PROJECT_DIR$/common/model/training_effort_management.py" />
         <option value="$PROJECT_DIR$/common/model/model_storage.py" />
+        <option value="$PROJECT_DIR$/common/model/training_effort_management.py" />
+        <option value="$PROJECT_DIR$/common/model/MODEL_MGT_PARAMS.py" />
+        <option value="$PROJECT_DIR$/common/misc/RollingBuffer.py" />
+        <option value="$PROJECT_DIR$/common/misc/fileops.py" />
+        <option value="$PROJECT_DIR$/common/model/overfit_mgt.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="12" />
-    <option name="y" value="31" />
-    <option name="width" value="1632" />
+    <option name="y" value="44" />
+    <option name="width" value="1236" />
     <option name="height" value="905" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -320,6 +369,12 @@
               <item name="KerasFormulaBench" type="b2602c69:ProjectViewProjectNode" />
               <item name="KerasFormulaBench" type="462c0819:PsiDirectoryNode" />
               <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KerasFormulaBench" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KerasFormulaBench" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name=".pytest_cache" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KerasFormulaBench" type="b2602c69:ProjectViewProjectNode" />
@@ -552,21 +607,21 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="12" y="31" width="1632" height="905" extended-state="0" />
+    <frame x="0" y="44" width="1236" height="905" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49904397" visible="true" weight="0.24339622" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49904397" visible="true" weight="0.3241206" />
       <window_info id="Structure" order="1" sideWeight="0.500956" side_tool="true" weight="0.24339622" />
       <window_info id="Favorites" order="2" sideWeight="0.500956" side_tool="true" weight="0.24339622" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" weight="0.5772152" />
-      <window_info active="true" anchor="bottom" id="Debug" order="2" visible="true" weight="0.4164557" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.45443037" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.46835443" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.47848102" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3278481" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.31772152" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.1" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.3288835" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -589,22 +644,30 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apps/training_it.py</url>
           <line>9</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/plugins/expr_calc/model_impl.py</url>
           <line>39</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/common/model/model_storage.py</url>
           <line>19</line>
           <option name="timeStamp" value="83" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/common/misc/fileops.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
       </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -616,6 +679,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>_recent_epochs_to_track.count()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>path.rsplit('/')[2]</expression-string>
         <language-id>Python</language-id>
@@ -821,27 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/misc/RollingBuffer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <marker date="1535820503631" expanded="true" signature="187:320" ph="..." />
-            <marker date="1535820503631" expanded="true" signature="266:320" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../PYTHON_ENVS/p_3_6_6/lib/python3.6/site-packages/keras/callbacks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>
@@ -872,69 +919,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/expr_calc/model_data/archive/09-35-52.112686.json">
+    <entry file="file://$PROJECT_DIR$/plugins/expr_calc/model_data/archive/09-35-52.112686.json" />
+    <entry file="file://$PROJECT_DIR$/plugins/expr_calc/model_data/model.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/model/training_effort_management.py">
+    <entry file="file://$PROJECT_DIR$/common/model/MODEL_MGT_PARAMS.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        <state>
+          <caret column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/model/model_storage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
-            <marker date="1535910815529" expanded="true" signature="120:123" ph="..." />
-            <marker date="1535910815529" expanded="true" signature="1039:1062" ph="..." />
+            <element signature="e#0#40#0" expanded="true" />
+            <marker date="1535913777337" expanded="true" signature="186:314" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PYTHON_ENVS/p_3_6_6/lib/python3.6/site-packages/keras/callbacks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/expr_calc/model_impl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="118">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/model/overfit_mgt.py">
+    <entry file="file://$PROJECT_DIR$/common/model/training_effort_management.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+        <state relative-caret-position="118">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
-            <marker date="1535905562248" expanded="true" signature="489:638" ph="..." />
-            <marker date="1535905562248" expanded="true" signature="666:675" ph="..." />
+            <element signature="e#0#36#0" expanded="true" />
+            <marker date="1535957711924" expanded="true" signature="120:122" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/model/MODEL_MGT_PARAMS.py">
+    <entry file="file://$PROJECT_DIR$/common/misc/RollingBuffer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        <state relative-caret-position="224">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/misc/fileops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="258">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1535910573726" expanded="true" signature="111:199" ph="..." />
-            <marker date="1535910573726" expanded="true" signature="393:649" ph="..." />
+            <marker date="1536005249956" expanded="true" signature="368:398" ph="..." />
+            <marker date="1536005249956" expanded="true" signature="431:519" ph="..." />
+            <marker date="1536005249956" expanded="true" signature="728:1089" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/model/model_storage.py">
+    <entry file="file://$PROJECT_DIR$/common/model/overfit_mgt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="127">
+          <caret line="64" column="47" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <marker date="1535913487826" expanded="true" signature="186:314" ph="..." />
+            <element signature="e#0#43#0" expanded="true" />
+            <marker date="1536006303559" expanded="true" signature="848:986" ph="..." />
+            <marker date="1536006303559" expanded="true" signature="2023:2388" ph="..." />
           </folding>
         </state>
       </provider>

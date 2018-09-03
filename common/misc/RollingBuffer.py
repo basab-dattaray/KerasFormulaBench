@@ -13,11 +13,23 @@ class RollingBuffer(object):
         return len(self.get_last_n(self._size))
 
     def add(self, obj, fn_overwrite_callback = None):
-        assert self._cursor < self._size
+        # assert self._cursor < self._size
+        old_cursor = self._cursor
+        if old_cursor < 0:
+            old_cursor += self._size
+
+        if self._list[old_cursor] is not None:
+            old_Info = self._list[old_cursor]
+
+            if fn_overwrite_callback is not None:
+                fn_overwrite_callback(old_Info)
+
         self._append_count += 1
 
         self._cursor += 1
         self._cursor = self._cursor % self._size
+
+
 
         self._list[self._cursor] = obj
 
