@@ -1,10 +1,7 @@
 from common.generator.data_bender import *
 from common.misc.character_mgt import ctable
 
-class colors:
-    ok = '\033[92m'
-    fail = '\033[91m'
-    close = '\033[0m'
+from common.render.print_colors import *
 
 DIGITS_ARE_REVERSE = False
 

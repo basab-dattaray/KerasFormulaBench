@@ -3,6 +3,7 @@ from common.model.loss_mgt import *
 from common.misc.RollingBuffer import *
 from common.misc.fileops import *
 from common.model.model_storage import *
+from common.render.print_colors import *
 
 def overfit_mgr(fn_stop_training, model, plugin_name):
     _loss_info = loss_mgr()
@@ -29,6 +30,12 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
         nonlocal  _recent_epochs_to_track
         val_loss_direction, changed_val_loss_direction = fn_loss_direction(logs)
         val_loss = logs[VAL_LOSS]
+
+        if val_loss_direction <= 0:
+            print(colors.ok + '☑' + colors.close, end=' ')
+        else:
+            print(colors.fail + '☒' + colors.close, end=' ')
+
         print('val_loss => {}::    DIRECTION => {} and CHANGED_DIRECTION => {}'.format(val_loss, val_loss_direction, changed_val_loss_direction))
 
         if val_loss_direction > 0 and changed_val_loss_direction == True:

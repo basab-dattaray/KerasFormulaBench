@@ -14,7 +14,7 @@ class RollingBuffer(object):
 
     def add(self, obj, fn_overwrite_callback = None):
         # assert self._cursor < self._size
-        old_cursor = self._cursor
+        old_cursor = self._cursor + 1
         if old_cursor < 0:
             old_cursor += self._size
 
