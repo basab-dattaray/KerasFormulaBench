@@ -80,7 +80,7 @@ def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_fo
 
         early_stopping_call_back = TrainingContinuationCallback(fn_stop_training, _model, plugin_name)
 
-        for iteration in range(0, num_of_iterations - 1):
+        for iteration in range(0, num_of_iterations):
 
             if (_stop_running):
                 _stop_running = False
