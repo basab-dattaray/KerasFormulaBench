@@ -19,7 +19,7 @@ num_of_iterations = NUM_OF_ITERATIONS
 while num_of_iterations > 0:
     fn_setup_model(inputs, labels)
     num_of_iterations = fn_train_model(num_of_iterations, BATCH_SIZE,  NUM_OF_EPOCHS)
-    print('Interations: {} / {}'.format(num_of_iterations, NUM_OF_ITERATIONS))
+    print('Interations: {}/{} completed'.format(NUM_OF_ITERATIONS - num_of_iterations, num_of_iterations ))
     print('===============================================================================')
     print()
 

@@ -21,12 +21,8 @@ class TrainingContinuationCallback(Callback):
         self._epoch = epoch
 
     def on_epoch_end(self, epoch, logs):
-        # info = (self._train_iteration, self._epoch, self._batch, logs)
         self.fn_check_overfitting(self._train_iteration, self._epoch, self._batch, logs)
 
-        # if is_overfitting:
-        #     print(is_overfitting)
-        #     self.fn_stop_and_clean()
 
 
     def on_batch_begin(self, batch, logs):

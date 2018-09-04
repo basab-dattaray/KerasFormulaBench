@@ -11,7 +11,7 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
     fn_loss_direction = loss_mgr()
     _archive_dir_path = get_abs_path('plugins/' + plugin_name + '/model_data/archive/')
     remove_directory_tree(_archive_dir_path)
-    print ('cleaned archive if needed')
+    print ('cleaned archive if that was needed')
 
     def save_model_in_archive():
         nonlocal  plugin_name, _archive_dir_path
@@ -32,15 +32,15 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
         val_loss = logs[VAL_LOSS]
 
         if val_loss_direction <= 0:
-            print(colors.ok + '☑' + colors.close, end=' ')
+            print(colors.ok + '>>> PROGRESS >>>' + colors.close, end=' ')
         else:
-            print(colors.fail + '☒' + colors.close, end=' ')
+            print(colors.fail + '<<< REGRESS <<<' + colors.close, end=' ')
 
         print('val_loss => {}::    DIRECTION => {} and CHANGED_DIRECTION => {}'.format(val_loss, val_loss_direction, changed_val_loss_direction))
 
         if val_loss_direction > 0 and changed_val_loss_direction == True:
             _recent_epochs_to_track.reset()
-            remove_directory_tree(_archive_dir_path)
+            remove_directory_tree(_archive_dir_path) # cleanup archive
 
         if val_loss_direction > 0:
             new_model_filepath = save_model_in_archive()
