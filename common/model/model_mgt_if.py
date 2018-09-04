@@ -9,7 +9,7 @@ def model_mgr(plugin_module, plugin_name, num_of_iterations, save_after_n_iterat
     def init():
         nonlocal fn_setup_model, fn_train_model, fn_train_on, fn_stop_training, fn_compile_model, fn_predict
         fn_setup_model, fn_train_model, fn_train_on, fn_stop_training, fn_compile_model, fn_predict = \
-            plugin_module.model(plugin_name, num_of_iterations, save_after_n_iterations, num_of_iteration_degradations_for_overfitting)
+            plugin_module.model(plugin_name,  save_after_n_iterations, num_of_iteration_degradations_for_overfitting)
 
     init()
 

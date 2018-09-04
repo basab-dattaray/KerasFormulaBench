@@ -17,6 +17,7 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
         dt_now = get_filename_based_on_time()
         model_file_path = _archive_dir_path + dt_now
         save_model(model_file_path, model)
+        print ('save model {} in archive'.format(dt_now))
         return model_file_path
 
     def cleanup_model_overspill(info):

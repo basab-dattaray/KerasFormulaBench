@@ -10,10 +10,10 @@ from common.model.model_storage import *
 from common.generator.data_bender import *
 from common.misc.fileops import *
 
-def model(plugin_name, num_of_iterations, save_after_n_iterations, num_of_iteration_degradations_for_overfitting):
+def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_for_overfitting):
 
     _model = None
-    _stop_running = False
+    _stop_running = None
     _x_train = None
     _y_train = None
     _x_val = None
@@ -69,7 +69,7 @@ def model(plugin_name, num_of_iterations, save_after_n_iterations, num_of_iterat
             _model.summary()
 
 
-    def fn_train_model(batch_size, num_of_epochs):
+    def fn_train_model(num_of_iterations, batch_size, num_of_epochs):
         nonlocal _batch_size, _num_of_epochs
         nonlocal _model, _abs_model_path
         nonlocal _stop_running
@@ -80,9 +80,10 @@ def model(plugin_name, num_of_iterations, save_after_n_iterations, num_of_iterat
 
         early_stopping_call_back = TrainingContinuationCallback(fn_stop_training, _model, plugin_name)
 
-        for iteration in range(0, num_of_iterations):
+        for iteration in range(0, num_of_iterations - 1):
 
             if (_stop_running):
+                _stop_running = False
                 break
                 # pass
             print()
@@ -96,9 +97,13 @@ def model(plugin_name, num_of_iterations, save_after_n_iterations, num_of_iterat
                        verbose=2)
             if iteration > 0 and iteration % save_after_n_iterations == 0:
                 save_model(_abs_model_path, _model)
+                print ('saved model after {} iterations'.format(iteration))
 
         if not _stop_running:
             save_model(_abs_model_path, _model)
+            print('saved model on forced stop')
+
+        return num_of_iterations - iteration
 
     def fn_train_on():
         nonlocal _batch_size, _num_of_epochs
