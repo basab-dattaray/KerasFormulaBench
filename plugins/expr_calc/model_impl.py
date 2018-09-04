@@ -69,7 +69,7 @@ def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_fo
             _model.summary()
 
 
-    def fn_train_model(num_of_iterations, batch_size, num_of_epochs):
+    def fn_train_model(total_num_of_iterations, current_iteration, batch_size, num_of_epochs):
         nonlocal _batch_size, _num_of_epochs
         nonlocal _model, _abs_model_path
         nonlocal _stop_running
@@ -80,7 +80,9 @@ def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_fo
 
         early_stopping_call_back = TrainingContinuationCallback(fn_stop_training, _model, plugin_name)
 
-        for iteration in range(0, num_of_iterations):
+        print("RANGE:", range(current_iteration, total_num_of_iterations + 1))
+
+        for iteration in range(current_iteration, total_num_of_iterations + 1):
 
             if (_stop_running):
                 _stop_running = False
@@ -99,11 +101,10 @@ def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_fo
                 save_model(_abs_model_path, _model)
                 print ('saved model after {} iterations'.format(iteration))
 
-        if not _stop_running:
-            save_model(_abs_model_path, _model)
-            print('saved model on forced stop')
+        save_model(_abs_model_path, _model)
+        print('saved model, normal termination')
 
-        return num_of_iterations - iteration
+        return  iteration
 
     def fn_train_on():
         nonlocal _batch_size, _num_of_epochs

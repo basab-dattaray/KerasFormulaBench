@@ -14,12 +14,11 @@ plugin_name, fn_get_data, fn_generate_data_given_input_strings,fn_setup_model, f
 
 inputs, labels = fn_get_data(num_samples=TRAINING_SIZE)
 
-
-num_of_iterations = NUM_OF_ITERATIONS
-while num_of_iterations > 0:
+iteration_num = 1
+while iteration_num  < NUM_OF_ITERATIONS:
     fn_setup_model(inputs, labels)
-    num_of_iterations = fn_train_model(num_of_iterations, BATCH_SIZE,  NUM_OF_EPOCHS)
-    print('Interations: {}/{} completed'.format(NUM_OF_ITERATIONS - num_of_iterations, NUM_OF_ITERATIONS ))
+    iteration_num = fn_train_model(NUM_OF_ITERATIONS, iteration_num, BATCH_SIZE,  NUM_OF_EPOCHS)
+    print('Interations: {}/{} completed'.format(iteration_num, NUM_OF_ITERATIONS ))
     print('===============================================================================')
     print()
 

@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9ba551c-3c74-40e6-8fdb-82eab22ab1a2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/apps/RUN_CONSTANTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/RUN_CONSTANTS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-04 00-18-18.122233.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-04 00-18-18.122233.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-04 00-18-25.887187.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-04 00-18-25.887187.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-04 00-32-51.152807.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-04 00-32-51.152807.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/expr_calc/model_data/model.h5" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugins/expr_calc/model_impl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="82" column="30" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="30" />
+            <state relative-caret-position="830">
+              <caret line="82" column="51" selection-start-line="82" selection-start-column="51" selection-end-line="82" selection-end-column="51" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -217,7 +214,6 @@
         <option value="$PROJECT_DIR$/common/model/model_storage.py" />
         <option value="$PROJECT_DIR$/common/model/model_mgt_if.py" />
         <option value="$PROJECT_DIR$/apps/mediation_mgt.py" />
-        <option value="$PROJECT_DIR$/plugins/expr_calc/model_impl.py" />
         <option value="$PROJECT_DIR$/common/model/MODEL_MGT_PARAMS.py" />
         <option value="$PROJECT_DIR$/common/render.py" />
         <option value="$PROJECT_DIR$/common/rendor/print_colors.py" />
@@ -227,6 +223,7 @@
         <option value="$PROJECT_DIR$/common/model/overfit_mgt.py" />
         <option value="$PROJECT_DIR$/apps/training_it.py" />
         <option value="$PROJECT_DIR$/apps/RUN_CONSTANTS.py" />
+        <option value="$PROJECT_DIR$/plugins/expr_calc/model_impl.py" />
       </list>
     </option>
   </component>
@@ -552,8 +549,8 @@
       <window_info id="Structure" order="1" sideWeight="0.500956" side_tool="true" weight="0.24339622" />
       <window_info id="Favorites" order="2" sideWeight="0.500956" side_tool="true" weight="0.24339622" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" weight="0.45443037" />
-      <window_info active="true" anchor="bottom" id="Debug" order="2" visible="true" weight="0.578481" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.45443037" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.578481" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" />
@@ -954,8 +951,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/expr_calc/model_impl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="82" column="30" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="30" />
+        <state relative-caret-position="830">
+          <caret line="82" column="51" selection-start-line="82" selection-start-column="51" selection-end-line="82" selection-end-column="51" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
