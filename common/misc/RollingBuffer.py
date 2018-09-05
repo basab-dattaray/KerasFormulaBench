@@ -18,6 +18,7 @@ class RollingBuffer(object):
         old_cursor = self._cursor + 1
         if old_cursor < 0:
             old_cursor += self._size
+        old_cursor = old_cursor % self._size
 
         if self._list[old_cursor] is not None:
             old_Info = self._list[old_cursor]
