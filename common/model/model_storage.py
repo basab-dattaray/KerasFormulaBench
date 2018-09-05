@@ -14,7 +14,10 @@ def is_model_usable(path):
 
 def save_model(path, model):
     # serialize model to JSON
+
     base_folder = path.rsplit('/', 1)[0]
+    path = get_abs_path(path)
+    base_folder = get_abs_path(base_folder)
     if not os.path.exists(base_folder):
         os.makedirs(base_folder)
 
@@ -23,7 +26,7 @@ def save_model(path, model):
         json_file.write(model_json)
     # serialize weights to HDF5
     model.save_weights(path + ".h5")
-    # print("Saved model to disk")
+    print("Saved model to disk")
 
 
 def load_model(path):

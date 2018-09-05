@@ -9,7 +9,7 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
     _loss_info = loss_mgr()
     _recent_epochs_to_track = RollingBuffer(RECENT_EPOCHS_BUFFER)
     fn_loss_direction = loss_mgr()
-    _archive_dir_path = get_abs_path('plugins/' + plugin_name + '/model_data/archive/')
+    _archive_dir_path = 'plugins/' + plugin_name + '/model_data/archive/'
     remove_directory_tree(_archive_dir_path)
     print ('cleaned archive if that was needed')
 
@@ -27,7 +27,7 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
         remove_file(old_model_path + '.json')
 
     def fn_check_overfitting(iter_num, epoch_num, batch_num, logs):
-        nonlocal  _recent_epochs_to_track
+        nonlocal  _recent_epochs_to_track, _archive_dir_path
         val_loss_direction, changed_val_loss_direction = fn_loss_direction(logs)
         val_loss = logs[VAL_LOSS]
 
@@ -53,13 +53,14 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
     def find_model_filepath_for_lowest_val_loss():
         nonlocal  _recent_epochs_to_track
         lowest_val_loss = 1.0
+        model_path_for_best = None
         for epoch_end_info in _recent_epochs_to_track.get_last_n(RECENT_EPOCHS_BUFFER):
             _, _, _, logs, model_filepath = epoch_end_info
             val_loss = logs[VAL_LOSS]
             if val_loss < lowest_val_loss:
                 lowest_val_loss = val_loss
-                return model_filepath
-        return None
+                model_path_for_best = model_filepath
+        return model_path_for_best
 
     def fn_stop_and_clean():
         nonlocal _archive_dir_path
@@ -75,7 +76,7 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
 
     def move_model_files_from_archive_to_model_data(_archive_dir_path, model_filepath):
         # src_file_path = _archive_dir_path + model_filepath
-        model_dir_path = get_abs_path('plugins/' + plugin_name + '/model_data/')
+        model_dir_path = 'plugins/' + plugin_name + '/model_data/'
         move_and_override_file(model_filepath + '.h5', model_dir_path, 'model.h5')
         move_and_override_file(model_filepath + '.json', model_dir_path, 'model.json')
 

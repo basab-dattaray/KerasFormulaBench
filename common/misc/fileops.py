@@ -23,10 +23,13 @@ def get_filename_based_on_time():
     return fname
 
 def get_file_modification_datetime(filename_path):
-    t = os.path.getmtime(filename_path)
+    filepath = get_abs_path(filename_path)
+    t = os.path.getmtime(filepath)
     return datetime.datetime.fromtimestamp(t)
 
 def move_and_override_file(src_file_path, dst_dir_path, src_file_name):
+    src_file_path = get_abs_path(src_file_path)
+    dst_dir_path = get_abs_path(dst_dir_path)
     if not os.path.exists(dst_dir_path):
         os.makedirs(dst_dir_path)
 
@@ -81,6 +84,7 @@ def get_lines_from_file(rel_file_path):
 
 
 def get_abs_path(relative_path):
+    file_path = None
     try:
         path, file_name = relative_path.rsplit('/', 1)
         d = os.getcwd()
