@@ -26,14 +26,14 @@ def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_fo
 
     def fn_setup_model(inputs, labels):
 
-        nonlocal _model
+        # nonlocal _model
         nonlocal _x_train, _y_train,  _x_val, _y_val
         _x_train, _x_val, _y_train, _y_val = data_breaker(inputs, labels)
-
+        model = None
         if is_model_usable(_abs_model_path):
-            _model = load_model(_abs_model_path)
+            model = load_model(_abs_model_path)
 
-            fn_compile_model(_model)
+            fn_compile_model(model)
 
         else:
 
@@ -44,41 +44,43 @@ def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_fo
             # BATCH_SIZE = 128
             NUM_OF_HIDDEN_LAYERS = 1
             print('Build _model...')
-            _model = Sequential()
+            model = Sequential()
             # "Encode" the input sequence using an RNN, producing an output of HIDDEN_SIZE.
             # Note: In a situation where your input sequences have a variable length,
             # use input_shape=(None, num_feature).
-            _model.add(layers.LSTM(HIDDEN_SIZE, input_shape=(input_size, len(chars))))
+            model.add(layers.LSTM(HIDDEN_SIZE, input_shape=(input_size, len(chars))))
             # As the decoder RNN's input, repeatedly provide with the last hidden state of
             # RNN for each time step. Repeat 'NUM_OF_DIGITS_IN_OPERAND + 1' times as that's the maximum
             # length of output, e.g., when NUM_OF_DIGITS_IN_OPERAND=3, max output is 999+999=1998.
             # _model.add(layers.RepeatVector(data_gen_dict['operand_size'] + 1))
-            _model.add(layers.RepeatVector(label_size))
+            model.add(layers.RepeatVector(label_size))
             # The decoder RNN could be multiple layers stacked or a single layer.
             for _ in range(NUM_OF_HIDDEN_LAYERS):
                 # By setting return_sequences to True, return not only the last output but
                 # all the outputs so far in the form of (num_samples, timesteps,
                 # output_dim). This is necessary as TimeDistributed in the below expects
                 # the first dimension to be the timesteps.
-                _model.add(layers.LSTM(HIDDEN_SIZE, return_sequences=True))
+                model.add(layers.LSTM(HIDDEN_SIZE, return_sequences=True))
             # Apply a dense layer to the every temporal slice of an input. For each of step
             # of the output sequence, decide which character should be chosen.
-            _model.add(layers.TimeDistributed(layers.Dense(len(chars))))
-            _model.add(layers.Activation('softmax'))
-            fn_compile_model(_model)
-            _model.summary()
+            model.add(layers.TimeDistributed(layers.Dense(len(chars))))
+            model.add(layers.Activation('softmax'))
+            fn_compile_model(model)
+            model.summary()
+        return model
 
 
-    def fn_train_model(total_num_of_iterations, current_iteration, batch_size, num_of_epochs):
+    def fn_train_model(model, total_num_of_iterations, current_iteration, batch_size, num_of_epochs):
         nonlocal _batch_size, _num_of_epochs
-        nonlocal _model, _abs_model_path
+        # nonlocal model, \
+        nonlocal _abs_model_path
         nonlocal _stop_running
         nonlocal  _x_train, _y_train,  _x_val, _y_val
 
         _batch_size = batch_size
         _num_of_epochs = num_of_epochs
 
-        early_stopping_call_back = TrainingContinuationCallback(fn_stop_training, _model, plugin_name)
+        early_stopping_call_back = TrainingContinuationCallback(fn_stop_training, model, plugin_name)
 
         print("RANGE:", range(current_iteration, total_num_of_iterations + 1))
 
@@ -91,17 +93,17 @@ def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_fo
             print()
             print('-' * 50)
             print('Iteration', iteration)
-            _model.fit(_x_train, _y_train,
-                       batch_size=batch_size,
-                       epochs=num_of_epochs,
-                       validation_data=( _x_val, _y_val),
-                       callbacks=[early_stopping_call_back],
-                       verbose=2)
+            model.fit(_x_train, _y_train,
+                      batch_size=batch_size,
+                      epochs=num_of_epochs,
+                      validation_data=( _x_val, _y_val),
+                      callbacks=[early_stopping_call_back],
+                      verbose=2)
             if iteration > 0 and iteration % save_after_n_iterations == 0:
-                save_model(_abs_model_path, _model)
+                save_model(_abs_model_path, model)
                 print ('saved model after {} iterations'.format(iteration))
 
-        save_model(_abs_model_path, _model)
+        save_model(_abs_model_path, model)
         print('saved model, normal termination')
 
         return  iteration
