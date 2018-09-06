@@ -70,54 +70,6 @@ def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_fo
         return model
 
 
-    def fn_train_model(model,inputs, labels, total_num_of_iterations, current_iteration, batch_size, num_of_epochs):
-        nonlocal _batch_size, _num_of_epochs
-        # nonlocal model, \
-        nonlocal _abs_model_path
-        nonlocal _stop_running
-        # nonlocal  _x_train, _y_train,  _x_val, _y_val
-
-        _x_train, _x_val, _y_train, _y_val = data_breaker(inputs, labels)
-
-        _batch_size = batch_size
-        _num_of_epochs = num_of_epochs
-
-        early_stopping_call_back = TrainingContinuationCallback(fn_stop_training, model, plugin_name)
-
-        print("RANGE:", range(current_iteration, total_num_of_iterations + 1))
-
-        for iteration in range(current_iteration, total_num_of_iterations + 1):
-
-            if (_stop_running):
-                _stop_running = False
-                break
-                # pass
-            print()
-            print('-' * 50)
-            print('Iteration', iteration)
-            model.fit(_x_train, _y_train,
-                      batch_size=batch_size,
-                      epochs=num_of_epochs,
-                      validation_data=( _x_val, _y_val),
-                      callbacks=[early_stopping_call_back],
-                      verbose=2)
-            if iteration > 0 and iteration % save_after_n_iterations == 0:
-                save_model(_abs_model_path, model)
-                print ('saved model after {} iterations'.format(iteration))
-
-        save_model(_abs_model_path, model)
-        print('saved model, normal termination')
-
-        return  iteration
-
-    # def fn_train_on():
-    #     nonlocal _batch_size, _num_of_epochs
-    #     pass
-
-    def fn_stop_training():
-        nonlocal _stop_running
-        _stop_running = True
-
     def fn_compile_model(model):
         model.compile(loss='categorical_crossentropy',
                       optimizer='adam',
@@ -127,4 +79,4 @@ def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_fo
         out_str = None
         return out_str
 
-    return (fn_setup_model, fn_train_model, fn_stop_training, fn_compile_model, fn_predict)
+    return (fn_setup_model, fn_compile_model, fn_predict)
