@@ -17,7 +17,7 @@ inputs, labels = fn_get_data(num_samples=TRAINING_SIZE)
 iteration_num = 1
 while iteration_num  < NUM_OF_ITERATIONS:
     model = fn_setup_model(inputs, labels)
-    iteration_num = fn_train_model(model, NUM_OF_ITERATIONS, iteration_num, BATCH_SIZE,  NUM_OF_EPOCHS)
+    iteration_num = fn_train_model(model, inputs, labels, NUM_OF_ITERATIONS, iteration_num, BATCH_SIZE,  NUM_OF_EPOCHS)
     print('Interations: {}/{} completed'.format(iteration_num, NUM_OF_ITERATIONS ))
     print('===============================================================================')
     print()

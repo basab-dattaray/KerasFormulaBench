@@ -14,10 +14,10 @@ def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_fo
 
     _model = None
     _stop_running = None
-    _x_train = None
-    _y_train = None
-    _x_val = None
-    _y_val = None
+    # _x_train = None
+    # _y_train = None
+    # _x_val = None
+    # _y_val = None
 
     _batch_size = None
     _num_of_epochs = None
@@ -27,8 +27,8 @@ def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_fo
     def fn_setup_model(inputs, labels):
 
         # nonlocal _model
-        nonlocal _x_train, _y_train,  _x_val, _y_val
-        _x_train, _x_val, _y_train, _y_val = data_breaker(inputs, labels)
+        # nonlocal _x_train, _y_train,  _x_val, _y_val
+        # _x_train, _x_val, _y_train, _y_val = data_breaker(inputs, labels)
         model = None
         if is_model_usable(_abs_model_path):
             model = load_model(_abs_model_path)
@@ -70,12 +70,14 @@ def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_fo
         return model
 
 
-    def fn_train_model(model, total_num_of_iterations, current_iteration, batch_size, num_of_epochs):
+    def fn_train_model(model,inputs, labels, total_num_of_iterations, current_iteration, batch_size, num_of_epochs):
         nonlocal _batch_size, _num_of_epochs
         # nonlocal model, \
         nonlocal _abs_model_path
         nonlocal _stop_running
-        nonlocal  _x_train, _y_train,  _x_val, _y_val
+        # nonlocal  _x_train, _y_train,  _x_val, _y_val
+
+        _x_train, _x_val, _y_train, _y_val = data_breaker(inputs, labels)
 
         _batch_size = batch_size
         _num_of_epochs = num_of_epochs
