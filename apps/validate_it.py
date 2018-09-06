@@ -9,7 +9,6 @@ from common.model.model_validation_mgr import *
 #
 # _fn_setup_model = None  # IN: input_string_size, output_string_size; SIDE_EFFECT: save model
 # _fn_train_model = None  # IN: inputs, labels, num_of_iterations, num_of_epochs, num_of_batches  SIDE_EFFECT: save and load model
-# _fn_train_on = None  # IN: inputs, labels, num_of_iterations; SIDE_EFFECT: save and load model
 # _fn_stop_training = None  #
 # _fn_predict = None  # IN: in_str; OUT: out_str
 

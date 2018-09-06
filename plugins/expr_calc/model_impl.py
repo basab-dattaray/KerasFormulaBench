@@ -106,9 +106,9 @@ def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_fo
 
         return  iteration
 
-    def fn_train_on():
-        nonlocal _batch_size, _num_of_epochs
-        pass
+    # def fn_train_on():
+    #     nonlocal _batch_size, _num_of_epochs
+    #     pass
 
     def fn_stop_training():
         nonlocal _stop_running
@@ -123,4 +123,4 @@ def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_fo
         out_str = None
         return out_str
 
-    return (fn_setup_model, fn_train_model, fn_train_on, fn_stop_training, fn_compile_model, fn_predict)
+    return (fn_setup_model, fn_train_model, fn_stop_training, fn_compile_model, fn_predict)
