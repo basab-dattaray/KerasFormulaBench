@@ -4,7 +4,7 @@ from keras import layers
 from six.moves import range
 
 
-from common.model.training_effort_management import *
+from common.model.training_callback_mgt import *
 from common.model.model_storage import *
 
 from common.generator.data_bender import *

@@ -2,10 +2,10 @@ from keras.callbacks import Callback
 #
 # from common.misc.RollingBuffer import *
 
-from common.model.overfit_mgt import *
+from common.model.training_overfit_mgt import *
 
 
-class TrainingContinuationCallback(Callback):
+class EarlyStopCallback(Callback):
 
 
     def __init__(self, fn_stop_training, model, plugin_name):

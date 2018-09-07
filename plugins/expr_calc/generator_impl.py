@@ -1,10 +1,4 @@
-# from common.misc.fileops import get_dict_from_json_file
-
 from plugins.expr_calc.expr import *
-
-
-# fn_get_data = None  # IN: num_samples: in_str_array, out_str_array
-# fn_generate_data_given_input_strings = None  # IN: input_string, input_string_size; OUT: label_string
 
 def generate(plugin_name):
 

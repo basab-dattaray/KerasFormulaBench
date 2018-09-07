@@ -1,5 +1,5 @@
 from common.misc.fileops import *
-from common.model.training_effort_management import *
+from common.model.training_callback_mgt import *
 from common.generator.data_bender import *
 
 def training_mgr(plugin_name, save_after_n_iterations):
@@ -19,7 +19,7 @@ def training_mgr(plugin_name, save_after_n_iterations):
     def fn_train_model(model, inputs, labels, total_num_of_iterations, current_iteration, batch_size, num_of_epochs):
         nonlocal _stop_running
 
-        early_stopping_call_back = TrainingContinuationCallback(_fn_stop_training, model, plugin_name)
+        early_stopping_call_back = EarlyStopCallback(_fn_stop_training, model, plugin_name)
 
         _x_train, _x_val, _y_train, _y_val = data_breaker(inputs, labels)
         # print("RANGE:", range(current_iteration, total_num_of_iterations + 1))

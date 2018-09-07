@@ -7,13 +7,12 @@ from plugins.expr_calc.normalizer import *
 def poly(plugin_name, coeff_arr):
     abs_path_to_json_scratch_file = None
 
-    def fn_calc(in_int):
-        out_int = -20 - .15 * in_int + .125 * (in_int ** 2)
+    def fn_calc(digit):
+        digout = -20 - .15 * digit + .125 * (digit ** 2)
         i = 0
         for c in coeff_arr:
-            out_int += coeff_arr[i]
-        return out_int * 100
-
+            digout += coeff_arr[i]
+        return digout * 100
 
     def fn_generate_data(num_samples):
         nonlocal  abs_path_to_json_scratch_file
