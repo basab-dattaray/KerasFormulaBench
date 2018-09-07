@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9ba551c-3c74-40e6-8fdb-82eab22ab1a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-06 20-40-17.866641.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/archive/2018-09-06 20-40-17.866641.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/expr_calc/model_data/model.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,13 +37,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="96" />
+          <entry key="gitignore" value="20" />
           <entry key="py" value="6107" />
           <entry key="txt" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="181" />
+          <entry key="PLAIN_TEXT" value="201" />
           <entry key="Python" value="6107" />
         </counts>
       </usages-collector>
@@ -145,8 +142,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+            <state relative-caret-position="15">
+              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -241,7 +238,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="25" />
     <option name="y" value="23" />
-    <option name="width" value="1582" />
+    <option name="width" value="1185" />
     <option name="height" value="946" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -329,6 +326,13 @@
               <item name="KerasFormulaBench" type="462c0819:PsiDirectoryNode" />
               <item name="plugins" type="462c0819:PsiDirectoryNode" />
               <item name="expr_calc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KerasFormulaBench" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KerasFormulaBench" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="expr_calc" type="462c0819:PsiDirectoryNode" />
+              <item name="model_data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -561,7 +565,7 @@
     <frame x="25" y="23" width="1582" height="946" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49904397" visible="true" weight="0.2512987" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49904397" visible="true" weight="0.2512987" />
       <window_info id="Structure" order="1" sideWeight="0.500956" side_tool="true" weight="0.24339622" />
       <window_info id="Favorites" order="2" sideWeight="0.500956" side_tool="true" weight="0.24339622" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -572,7 +576,7 @@
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32911393" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.45487365" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3278481" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4572804" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4572804" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.3288835" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1000,8 +1004,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+        <state relative-caret-position="15">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
         </state>
       </provider>
     </entry>
