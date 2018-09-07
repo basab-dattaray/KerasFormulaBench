@@ -4,6 +4,7 @@ from common.model.training_mgt import *
 
 from apps.mediation_mgt import *
 from apps.RUN_CONSTANTS import *
+from common.generator.noise_mgt import *
 
 import atexit
 
@@ -18,6 +19,9 @@ fn_train_model = training_mgr(plugin_name, NUM_OF_ITERATIONS)
 
 inputs, labels = fn_get_data(num_samples=TRAINING_SIZE)
 
+fn_add_noise_to_array_of_char_strings = noise_mgr(.1)
+
+fn_add_noise_to_array_of_char_strings(labels)
 iteration_num = 1
 while iteration_num  < NUM_OF_ITERATIONS:
     model = fn_setup_model(inputs, labels)

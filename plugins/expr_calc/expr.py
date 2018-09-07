@@ -104,7 +104,7 @@ if __name__ == '__main__':
     # abs_coeffs_file_path = get_abs_path('common/plugins/' + 'expr_calc' + 'model_data/COEFFS.TXT')
     # inputs = get_lines_from_file(abs_coeffs_file_path)
 
-    fn_calc, fn_generate_one_sample, fn_generate_data = poly([6, -.5, .25])
+    fn_calc, fn_generate_one_sample, fn_generate_data = poly([40.75])
     input, label = fn_generate_one_sample(NUM_OF_INPUT_PARTS)
     print(input, label)
 
