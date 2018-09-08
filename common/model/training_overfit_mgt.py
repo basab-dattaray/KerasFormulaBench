@@ -3,6 +3,7 @@ from common.model.loss_mgt import *
 from common.misc.RollingBuffer import *
 from common.model.model_storage import *
 from common.render.print_colors import *
+import sys
 
 def overfit_mgr(fn_stop_training, model, plugin_name):
     _loss_info = loss_mgr()
@@ -59,7 +60,7 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
 
     def find_model_filepath_for_lowest_val_loss():
         nonlocal  _recent_epochs_to_track
-        lowest_val_loss = 1.0
+        lowest_val_loss = sys.maxsize
         model_path_for_best = None
         for epoch_end_info in _recent_epochs_to_track.get_last_n(OVERFITTING_INFO_BUFFER_SIZE):
             _, _, _, logs, model_filepath = epoch_end_info
