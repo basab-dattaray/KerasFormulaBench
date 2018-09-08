@@ -9,7 +9,10 @@ def training_mgr(plugin_name, save_after_n_iterations):
 
     _abs_model_path = get_abs_path('plugins/' + plugin_name + '/model_data/model')
     _stop_running = False
-
+    _x_train = None
+    _x_val = None
+    _y_train = None
+    _y_val = None
 
     def _fn_stop_training():
         nonlocal _stop_running
@@ -18,18 +21,20 @@ def training_mgr(plugin_name, save_after_n_iterations):
 
     def fn_train_model(model, inputs, labels, total_num_of_iterations, current_iteration, batch_size, num_of_epochs):
         nonlocal _stop_running
+        nonlocal _x_train, _x_val, _y_train, _y_val
 
         early_stopping_call_back = EarlyStopCallback(_fn_stop_training, model, plugin_name)
 
         _x_train, _x_val, _y_train, _y_val = data_breaker(inputs, labels)
         # print("RANGE:", range(current_iteration, total_num_of_iterations + 1))
 
-        return train_on(model, _x_train, _x_val, _y_train, _y_val, batch_size, current_iteration, early_stopping_call_back,
+        return train_on(model, batch_size, current_iteration, early_stopping_call_back,
                         num_of_epochs, total_num_of_iterations)
 
-    def train_on(model, _x_train, _x_val, _y_train, _y_val, batch_size, current_iteration, early_stopping_call_back,
+    def train_on(model, batch_size, current_iteration, early_stopping_call_back,
                  num_of_epochs, total_num_of_iterations):
         nonlocal _stop_running
+        nonlocal _x_train, _x_val, _y_train, _y_val
         iteration = None
         for iteration in range(current_iteration, total_num_of_iterations + 1):
 
