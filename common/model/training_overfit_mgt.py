@@ -1,13 +1,12 @@
-from common.model.MODEL_MGT_PARAMS import *
+from apps.MODEL_MGT_PARAMS import *
 from common.model.loss_mgt import *
 from common.misc.RollingBuffer import *
-from common.misc.fileops import *
 from common.model.model_storage import *
 from common.render.print_colors import *
 
 def overfit_mgr(fn_stop_training, model, plugin_name):
     _loss_info = loss_mgr()
-    _recent_epochs_to_track = RollingBuffer(RECENT_EPOCHS_BUFFER)
+    _recent_epochs_to_track = RollingBuffer(OVERFITTING_INFO_BUFFER_SIZE)
     fn_loss_direction = loss_mgr()
     _archive_dir_path = 'plugins/' + plugin_name + '/model_data/archive/'
     remove_directory_tree(_archive_dir_path)
@@ -52,7 +51,7 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
             _recent_epochs_to_track.add(info, cleanup_model_overspill)
             # info_count = _recent_epochs_to_track.count()
             _count_of_consecative_regressive_iterations += 1
-            if _count_of_consecative_regressive_iterations > MAX_CONSECUTIVE_LOSS_DEGRATION_COUNT:
+            if _count_of_consecative_regressive_iterations > MAX_OVERFITTING_CONSECUTIVE_LOSS_DEGRATION_COUNT:
                 fn_stop_and_clean()
                 _count_of_consecative_regressive_iterations = 0
         else:
@@ -62,7 +61,7 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
         nonlocal  _recent_epochs_to_track
         lowest_val_loss = 1.0
         model_path_for_best = None
-        for epoch_end_info in _recent_epochs_to_track.get_last_n(RECENT_EPOCHS_BUFFER):
+        for epoch_end_info in _recent_epochs_to_track.get_last_n(OVERFITTING_INFO_BUFFER_SIZE):
             _, _, _, logs, model_filepath = epoch_end_info
             val_loss = logs[VAL_LOSS]
             if val_loss < lowest_val_loss:

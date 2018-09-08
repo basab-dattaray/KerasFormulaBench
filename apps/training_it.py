@@ -8,7 +8,7 @@ from common.generator.noise_mgt import *
 
 import atexit
 
-MAX_LOOP_COUNT = 3
+
 @atexit.register
 def goodbye():
     print ("You are now leaving KerasFormulaBench.")
