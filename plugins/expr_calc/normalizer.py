@@ -5,8 +5,8 @@ MAXLEN_INPUTS = 'maxlen_inputs'
 MAXLEN_LABELS = 'maxlen_labels'
 
 def normalize_sizes(inputs, maxlen_inputs, maxlen_labels, outputs):
-    inputs = normalize(inputs, maxlen_inputs)
-    labels = normalize(outputs, maxlen_labels)
+    inputs = normalize_list_of_strings(inputs, maxlen_inputs)
+    labels = normalize_list_of_strings(outputs, maxlen_labels)
     return inputs, labels
 
 

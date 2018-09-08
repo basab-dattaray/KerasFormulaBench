@@ -9,15 +9,20 @@ def get_maxlen_of_listitems(datalist):
             max_len = len(data_item)
     return max_len
 
-def normalize(datalist, maxsize):
+def normalize_list_of_strings(datalist, maxsize):
     result = []
     for s in datalist:
-        s_len = len(s)
-        new_s = s
-        if s_len < maxsize:
-            new_s = s + ' ' * (maxsize - s_len)
+        new_s = normalize_string( s, maxsize)
         result.append(new_s)
     return result
+
+
+def normalize_string(s, maxsize):
+    s_len = len(s)
+    new_s = s
+    if s_len < maxsize:
+        new_s = s + ' ' * (maxsize - s_len)
+    return new_s
 
 
 def vectorize(questions, expected):

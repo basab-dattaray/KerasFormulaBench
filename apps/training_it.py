@@ -8,7 +8,7 @@ from common.generator.noise_mgt import *
 
 import atexit
 
-MAX_LOOP_COUNT = 5
+MAX_LOOP_COUNT = 3
 @atexit.register
 def goodbye():
     print ("You are now leaving KerasFormulaBench.")
@@ -30,6 +30,7 @@ inputs, labels = create_noisy_data()
 iteration_num = 1
 loop_count = 1
 while iteration_num  < NUM_OF_ITERATIONS and loop_count <= MAX_LOOP_COUNT:
+    loop_count += 1
     model = fn_setup_model(inputs, labels)
     iteration_num = fn_train_model(model, inputs, labels, NUM_OF_ITERATIONS, iteration_num, BATCH_SIZE,  NUM_OF_EPOCHS)
     print('Interations: {}/{} completed'.format(iteration_num, NUM_OF_ITERATIONS ))

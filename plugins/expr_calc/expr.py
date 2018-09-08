@@ -81,8 +81,8 @@ def poly(plugin_name, coeff_arr):
 
         inp_str_arr, out_str_arr = create_set_of_inpstr_outstr_pairs(fn_iterate)
 
-        norm_inp_str_arr = normalize(inp_str_arr, maxlen_inputs)
-        norm_out_str_arr = normalize(out_str_arr, maxlen_labels)
+        norm_inp_str_arr = normalize_list_of_strings(inp_str_arr, maxlen_inputs)
+        norm_out_str_arr = normalize_list_of_strings(out_str_arr, maxlen_labels)
 
         return (norm_inp_str_arr, norm_out_str_arr)
 

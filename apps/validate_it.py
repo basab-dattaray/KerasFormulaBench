@@ -13,7 +13,7 @@ from common.model.model_validation_mgr import *
 # _fn_predict = None  # IN: in_str; OUT: out_str
 
 def validate_with_random_data():
-    plugin_name, fn_get_data, fn_generate_data_given_input_strings, fn_setup_model, fn_train_model, fn_stop_training, fn_compile_model, fn_predict = mediation_mgr()
+    plugin_name, fn_get_data, fn_generate_data_given_input_strings, fn_setup_model, fn_compile_model, fn_predict = mediation_mgr()
 
     inputs, labels = fn_get_data(num_samples=20)
 

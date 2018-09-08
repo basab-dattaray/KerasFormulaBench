@@ -1,5 +1,7 @@
 import numpy as np
 
+from common.generator.data_bender import *
+
 def noise_mgr(noise_factor = .01):
     def fn_add_noise_to_array_of_char_strings(char_str_array):
         len_of_array = len(char_str_array)
@@ -25,11 +27,12 @@ def get_random_number_as_string(string_size):
     sign = '-'
     if random_bool == 0:
         sign = ''
-        random_str = random_str + ' '
 
     random_str = sign + random_str
 
-    return random_str
+    normalized_random_str = normalize_string(random_str, string_size)
+
+    return normalized_random_str
 
 
 
