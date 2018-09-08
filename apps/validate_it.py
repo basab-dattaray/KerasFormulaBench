@@ -18,7 +18,7 @@ def validate_with_random_data():
     inputs, labels = fn_get_data(num_samples=20)
 
     fn_validate = create_model_validator(inputs, labels)
-    model = load_compiled_model(fn_compile_model, plugin_name)
+    model = load_compiled_model()
 
     fn_validate(model)
 

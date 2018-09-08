@@ -1,7 +1,7 @@
 from keras.models import model_from_json
 from common.misc.fileops import *
 from os.path import exists
-
+from common.misc.mediation_mgt import *
 
 # from plugins.expr_calc.model_if import compile_model
 
@@ -41,7 +41,9 @@ def load_model(path):
     return loaded_model
     # print("Loaded model from disk")
 
-def load_compiled_model(fn_compile_model, plugin_name):
+def load_compiled_model():
+    plugin_name, fn_get_data, fn_generate_data_given_input_strings, fn_setup_model, fn_compile_model, fn_predict \
+        = mediation_mgr()
     abs_model_path = get_abs_path('plugins/' + plugin_name + '/model_data/model')
     model = load_model(abs_model_path)
     fn_compile_model(model)
