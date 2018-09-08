@@ -10,7 +10,7 @@ from common.model.model_storage import *
 from common.generator.data_bender import *
 from common.misc.fileops import *
 
-def model(plugin_name, save_after_n_iterations, num_of_iteration_degradations_for_overfitting):
+def model(plugin_name):
 
     _model = None
     _stop_running = None
