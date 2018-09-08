@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d9ba551c-3c74-40e6-8fdb-82eab22ab1a2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/apps/training_it.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/training_it.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/model/MODEL_MGT_PARAMS.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/model/MODEL_MGT_PARAMS.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/expr_calc/model_data/model.h5" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,16 +38,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="96" />
+          <entry key="dummy" value="106" />
           <entry key="gitignore" value="20" />
-          <entry key="py" value="6590" />
+          <entry key="py" value="6607" />
           <entry key="txt" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="201" />
-          <entry key="Python" value="6590" />
+          <entry key="PLAIN_TEXT" value="211" />
+          <entry key="Python" value="6607" />
         </counts>
       </usages-collector>
     </session>
@@ -65,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/RUN_CONSTANTS.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -113,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/training_it.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="80">
+              <caret line="31" column="67" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="73" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -210,7 +211,6 @@
         <option value="$PROJECT_DIR$/common/model/model_storage.py" />
         <option value="$PROJECT_DIR$/common/model/overfit_mgt.py" />
         <option value="$PROJECT_DIR$/common/misc/fileops.py" />
-        <option value="$PROJECT_DIR$/common/model/MODEL_MGT_PARAMS.py" />
         <option value="$PROJECT_DIR$/common/misc/RollingBuffer.py" />
         <option value="$PROJECT_DIR$/apps/validate_it.py" />
         <option value="$PROJECT_DIR$/common/model/training_mgt.py" />
@@ -224,6 +224,7 @@
         <option value="$PROJECT_DIR$/plugins/expr_calc/expr.py" />
         <option value="$PROJECT_DIR$/common/generator/noise_mgt.py" />
         <option value="$PROJECT_DIR$/apps/RUN_CONSTANTS.py" />
+        <option value="$PROJECT_DIR$/common/model/MODEL_MGT_PARAMS.py" />
         <option value="$PROJECT_DIR$/apps/training_it.py" />
       </list>
     </option>
@@ -559,17 +560,17 @@
     <frame x="25" y="23" width="1307" height="946" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49904397" visible="true" weight="0.19920948" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49904397" visible="true" weight="0.19920948" />
       <window_info id="Structure" order="1" sideWeight="0.500956" side_tool="true" weight="0.24339622" />
       <window_info id="Favorites" order="2" sideWeight="0.500956" side_tool="true" weight="0.24339622" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" visible="true" weight="0.5198556" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.5198556" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.6064982" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32911393" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.45487365" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3278481" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3273165" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.4440433" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.3288835" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -964,13 +965,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/model/MODEL_MGT_PARAMS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/generator/generator_mgt_if.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -985,20 +979,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/training_it.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/RUN_CONSTANTS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/model/MODEL_MGT_PARAMS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/training_it.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="31" column="67" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
