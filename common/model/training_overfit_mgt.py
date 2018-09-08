@@ -13,6 +13,8 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
     remove_directory_tree(_archive_dir_path)
     print ('cleaned archive if that was needed')
 
+    _count_of_consecative_regressive_iterations = 0
+
     def save_model_in_archive():
         nonlocal  plugin_name, _archive_dir_path
         dt_now = get_filename_based_on_time()
@@ -28,8 +30,10 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
 
     def fn_check_overfitting(iter_num, epoch_num, batch_num, logs):
         nonlocal  _recent_epochs_to_track, _archive_dir_path
+        nonlocal _count_of_consecative_regressive_iterations
         val_loss_direction, changed_val_loss_direction = fn_loss_direction(logs)
         val_loss = logs[VAL_LOSS]
+
 
         if val_loss_direction <= 0:
             print(colors.ok + '>>> PROGRESS >>>' + colors.close, end=' ')
@@ -46,9 +50,13 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
             new_model_filepath = save_model_in_archive()
             info = (iter_num, epoch_num, batch_num, logs, new_model_filepath)
             _recent_epochs_to_track.add(info, cleanup_model_overspill)
-            info_count = _recent_epochs_to_track.count()
-            if info_count > MAX_CONSECUTIVE_LOSS_DEGRATION_COUNT:
-                    fn_stop_and_clean()
+            # info_count = _recent_epochs_to_track.count()
+            _count_of_consecative_regressive_iterations += 1
+            if _count_of_consecative_regressive_iterations > MAX_CONSECUTIVE_LOSS_DEGRATION_COUNT:
+                fn_stop_and_clean()
+                _count_of_consecative_regressive_iterations = 0
+        else:
+            _count_of_consecative_regressive_iterations = 0
 
     def find_model_filepath_for_lowest_val_loss():
         nonlocal  _recent_epochs_to_track

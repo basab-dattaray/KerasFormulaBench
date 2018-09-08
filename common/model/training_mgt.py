@@ -24,12 +24,12 @@ def training_mgr(plugin_name, save_after_n_iterations):
         _x_train, _x_val, _y_train, _y_val = data_breaker(inputs, labels)
         # print("RANGE:", range(current_iteration, total_num_of_iterations + 1))
 
-        return train_on(model, _stop_running, _x_train, _x_val, _y_train, _y_val, batch_size, current_iteration, early_stopping_call_back,
+        return train_on(model, _x_train, _x_val, _y_train, _y_val, batch_size, current_iteration, early_stopping_call_back,
                         num_of_epochs, total_num_of_iterations)
 
-    def train_on(model, _stop_running, _x_train, _x_val, _y_train, _y_val, batch_size, current_iteration, early_stopping_call_back,
+    def train_on(model, _x_train, _x_val, _y_train, _y_val, batch_size, current_iteration, early_stopping_call_back,
                  num_of_epochs, total_num_of_iterations):
-        # nonlocal _stop_running
+        nonlocal _stop_running
         iteration = None
         for iteration in range(current_iteration, total_num_of_iterations + 1):
 
