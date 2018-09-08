@@ -1,6 +1,6 @@
 from __future__ import print_function
 
-from apps.mediation_mgt import *
+from common.misc.mediation_mgt import *
 from common.model.model_storage import *
 from common.model.model_validation_mgr import *
 
@@ -9,8 +9,6 @@ from common.model.model_validation_mgr import *
 # from common.model.model_validation_mgr import *
 # from common.generator.data_generator import *
 # from common.model_mgt.model_storage import *
-
-from plugins.constants import *
 
 def validate():
     plugin_name, fn_get_data, fn_generate_data_given_input_strings, fn_stop_training, fn_compile_model, fn_predict = mediation_mgr()

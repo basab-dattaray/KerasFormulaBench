@@ -2,7 +2,7 @@ from __future__ import print_function
 
 from common.model.training_mgt import *
 
-from apps.mediation_mgt import *
+from common.misc.mediation_mgt import *
 from apps.RUN_CONSTANTS import *
 from common.generator.noise_mgt import *
 
