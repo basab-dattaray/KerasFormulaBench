@@ -6,7 +6,7 @@ NUM_OF_INPUT_PARTS = 8
 
 from plugins.expr_calc.normalizer import *
 
-def poly(plugin_name, coeff_arr):
+def poly(plugin_name):
     abs_path_to_json_scratch_file = None
 
     def fn_calc(digit):

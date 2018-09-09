@@ -8,7 +8,7 @@ def generate(plugin_name):
 
     def init():
         nonlocal  fn_generate_data, fn_generate_data_given_input_strings
-        fn_generate_data, fn_generate_data_given_input_strings = poly(plugin_name, [6, -.5, .25])
+        fn_generate_data, fn_generate_data_given_input_strings = poly(plugin_name)
 
     def fn_get_data(num_samples):
         nonlocal fn_generate_data
