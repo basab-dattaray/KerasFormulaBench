@@ -14,7 +14,20 @@ def poly(plugin_name):
 
         return digout
 
-    def fn_generate_data(num_samples):
+    def fn_generate_data_given_input_strings_impl(string_of_inputs):
+        maxlen_inputs, maxlen_labels = get_sizes(abs_path_to_json_scratch_file)
+
+        trimmed_input_strings = list( map(lambda s: s.strip(), string_of_inputs))
+        fn_iterate = workit_file_generator_mgr(trimmed_input_strings)
+
+        inp_str_arr, out_str_arr = create_set_of_inpstr_outstr_pairs(fn_iterate)
+
+        norm_inp_str_arr = normalize_list_of_strings(inp_str_arr, maxlen_inputs)
+        norm_out_str_arr = normalize_list_of_strings(out_str_arr, maxlen_labels)
+
+        return (norm_inp_str_arr, norm_out_str_arr)
+
+    def fn_generate_data_impl(num_samples):
         nonlocal  abs_path_to_json_scratch_file
         inputs, outputs = generate_data_from_random_numbers(num_samples)
 
@@ -73,18 +86,7 @@ def poly(plugin_name):
         out_str = str(round(out_num))
         return out_str
 
-    def fn_generate_data_given_input_strings_local(string_of_inputs):
-        maxlen_inputs, maxlen_labels = get_sizes(abs_path_to_json_scratch_file)
 
-        trimmed_input_strings = list( map(lambda s: s.strip(), string_of_inputs))
-        fn_iterate = workit_file_generator_mgr(trimmed_input_strings)
-
-        inp_str_arr, out_str_arr = create_set_of_inpstr_outstr_pairs(fn_iterate)
-
-        norm_inp_str_arr = normalize_list_of_strings(inp_str_arr, maxlen_inputs)
-        norm_out_str_arr = normalize_list_of_strings(out_str_arr, maxlen_labels)
-
-        return (norm_inp_str_arr, norm_out_str_arr)
 
     def create_set_of_inpstr_outstr_pairs(fn_iterate):
         inp_str_arr = []
@@ -97,17 +99,17 @@ def poly(plugin_name):
 
     abs_path_to_json_scratch_file = get_abs_path('plugins/' + plugin_name + '/model_data/sizes.json')
 
-    return  fn_generate_data, fn_generate_data_given_input_strings_local
+    return  fn_generate_data_impl, fn_generate_data_given_input_strings_impl
 
 
-if __name__ == '__main__':
-    # abs_coeffs_file_path = get_abs_path('common/plugins/' + 'expr_calc' + 'model_data/COEFFS.TXT')
-    # inputs = get_lines_from_file(abs_coeffs_file_path)
-
-    fn_calc, fn_generate_one_sample, fn_generate_data = poly([40.75])
-    input, label = fn_generate_one_sample(NUM_OF_INPUT_PARTS)
-    print(input, label)
-
-    inputs, outputs = fn_generate_data(3)
-
-    print(inputs, outputs)
+# if __name__ == '__main__':
+#     # abs_coeffs_file_path = get_abs_path('common/plugins/' + 'expr_calc' + 'model_data/COEFFS.TXT')
+#     # inputs = get_lines_from_file(abs_coeffs_file_path)
+#
+#     fn_calc, fn_generate_one_sample, fn_generate_data = poly([40.75])
+#     input, label = fn_generate_one_sample(NUM_OF_INPUT_PARTS)
+#     print(input, label)
+#
+#     inputs, outputs = fn_generate_data(3)
+#
+#     print(inputs, outputs)
