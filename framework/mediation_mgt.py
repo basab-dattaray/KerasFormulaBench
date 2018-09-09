@@ -1,6 +1,6 @@
-from common.misc.plugin_mgt import *
-from common.generator.generator_mgt_if import *
-from common.model.model_mgt_if import *
+from framework.plugin_mgt import *
+from framework.generator_mgt_if import *
+from framework.model_mgt_if import *
 
 def mediation_mgr():
 

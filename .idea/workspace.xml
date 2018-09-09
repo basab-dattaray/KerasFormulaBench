@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9ba551c-3c74-40e6-8fdb-82eab22ab1a2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/common/generator/formula_helper/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/framework/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/RUN_CONSTANTS.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/RUN_CONSTANTS.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/training_it.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/training_it.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/validate_it.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/validate_it.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/work_it.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/work_it.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/generator/generator_mgt_if.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/generator_mgt_if.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/misc/mediation_mgt.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/mediation_mgt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/misc/plugin_mgt.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/plugin_mgt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/model/model_mgt_if.py" beforeDir="false" afterPath="$PROJECT_DIR$/framework/model_mgt_if.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/model/model_storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/model/model_storage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/expr_calc/expr.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/expr_calc/expr.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/model.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/sizes.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/expr_calc/model_data/sizes.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_impl.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/expr_calc/model_impl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/expr_calc/model_data/model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/expr_calc/model_data/model.h5" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,28 +37,28 @@
           <entry key="TXT" value="3" />
           <entry key="gitignore" value="1" />
           <entry key="json" value="2" />
-          <entry key="py" value="133" />
+          <entry key="py" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="6" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="133" />
+          <entry key="Python" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="142" />
           <entry key="gitignore" value="20" />
-          <entry key="py" value="6969" />
+          <entry key="py" value="7066" />
           <entry key="txt" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="247" />
-          <entry key="Python" value="6969" />
+          <entry key="Python" value="7066" />
         </counts>
       </usages-collector>
     </session>
@@ -62,11 +68,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/RUN_CONSTANTS.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -76,18 +82,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-97">
               <caret line="4" column="53" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/work_it.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="14" selection-start-line="13" selection-end-line="14" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -105,35 +99,67 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/MODEL_MGT_PARAMS.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/CONFIG.JSON">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugins/expr_calc/expr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+            <state relative-caret-position="531">
+              <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
-                <marker date="1536499581403" expanded="true" signature="1909:1918" ph="..." />
+                <marker date="1536502269418" expanded="true" signature="1806:1815" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/expr_calc/model_data/COEFFS.TXT">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/framework/generator_mgt_if.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/mediation_mgt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="86">
+              <caret line="20" column="36" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/plugin_mgt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="23" column="37" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/model_mgt_if.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="40" selection-start-column="40" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/expr_calc/generator_impl.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -141,18 +167,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="33" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/validate_it.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -214,7 +228,6 @@
         <option value="$PROJECT_DIR$/common/misc/fileops.py" />
         <option value="$PROJECT_DIR$/common/misc/RollingBuffer.py" />
         <option value="$PROJECT_DIR$/common/model/training_effort_management.py" />
-        <option value="$PROJECT_DIR$/plugins/expr_calc/generator_impl.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/common/generator/random_numbers.py" />
         <option value="$PROJECT_DIR$/apps/mediation_mgt.py" />
@@ -229,13 +242,16 @@
         <option value="$PROJECT_DIR$/common/model/training_overfit_mgt.py" />
         <option value="$PROJECT_DIR$/apps/training_it.py" />
         <option value="$PROJECT_DIR$/plugins/expr_calc/model_impl.py" />
-        <option value="$PROJECT_DIR$/apps/RUN_CONSTANTS.py" />
+        <option value="$PROJECT_DIR$/plugins/expr_calc/generator_impl.py" />
         <option value="$PROJECT_DIR$/plugins/expr_calc/expr.py" />
+        <option value="$PROJECT_DIR$/framework/mediation_mgt.py" />
+        <option value="$PROJECT_DIR$/framework/generator_mgt_if.py" />
+        <option value="$PROJECT_DIR$/apps/RUN_CONSTANTS.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="25" />
+    <option name="x" value="53" />
     <option name="y" value="23" />
     <option name="width" value="1304" />
     <option name="height" value="946" />
@@ -307,7 +323,7 @@
             <path>
               <item name="KerasFormulaBench" type="b2602c69:ProjectViewProjectNode" />
               <item name="KerasFormulaBench" type="462c0819:PsiDirectoryNode" />
-              <item name="common_tests" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="KerasFormulaBench" type="b2602c69:ProjectViewProjectNode" />
@@ -352,6 +368,7 @@
       <recent name="$PROJECT_DIR$/plugins" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/framework" />
       <recent name="$PROJECT_DIR$/apps" />
       <recent name="$PROJECT_DIR$/common/misc" />
       <recent name="$PROJECT_DIR$/common/generator" />
@@ -369,7 +386,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.validate_it">
+  <component name="RunManager" selected="Python.training_it">
     <configuration name="normalizer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="KerasFormulaBench" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -478,8 +495,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.validate_it" />
         <item itemvalue="Python.training_it" />
+        <item itemvalue="Python.validate_it" />
         <item itemvalue="Python.work_it" />
         <item itemvalue="Python.normalizer" />
         <item itemvalue="Python tests.pytest for test_rolling_buffer.test_creation_buffer_size_2_add_2__return_2" />
@@ -570,21 +587,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="25" y="23" width="1304" height="946" extended-state="0" />
+    <frame x="53" y="23" width="1304" height="946" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49904397" visible="true" weight="0.19968304" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49904397" visible="true" weight="0.19968304" />
       <window_info id="Structure" order="1" sideWeight="0.500956" side_tool="true" weight="0.24339622" />
       <window_info id="Favorites" order="2" sideWeight="0.500956" side_tool="true" weight="0.24339622" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" visible="true" weight="0.5282792" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.45367026" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.51022863" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32911393" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.45487365" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3273165" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4440433" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.12033694" />
       <window_info anchor="bottom" id="Python Console" order="9" weight="0.3288835" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -619,7 +636,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/common/model/model_storage.py</url>
-          <line>22</line>
+          <line>21</line>
           <option name="timeStamp" value="83" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -641,6 +658,11 @@
           <url>file://$PROJECT_DIR$/plugins/expr_calc/model_impl.py</url>
           <line>33</line>
           <option name="timeStamp" value="195" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/plugins/expr_calc/expr.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="200" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -830,39 +852,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/expr_calc/generator_impl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/generator/random_numbers.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/generator/generator_mgt_if.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="96" selection-start-line="7" selection-start-column="96" selection-end-line="7" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/misc/plugin_mgt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="47" column="23" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/model/model_mgt_if.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="40" selection-start-column="40" selection-end-column="40" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/expr_calc/normalizer.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -871,13 +862,6 @@
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/generator/data_bender.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -898,24 +882,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/misc/mediation_mgt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/common/model/model_storage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-            <marker date="1536428403996" expanded="true" signature="225:353" ph="..." />
-            <marker date="1536428403996" expanded="true" signature="381:386" ph="..." />
+            <marker date="1536502970013" expanded="true" signature="189:317" ph="..." />
+            <marker date="1536502970013" expanded="true" signature="345:350" ph="..." />
           </folding>
         </state>
       </provider>
@@ -961,7 +935,7 @@
     <entry file="file://$PROJECT_DIR$/apps/validate_it.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
@@ -971,7 +945,7 @@
     <entry file="file://$PROJECT_DIR$/apps/work_it.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="14" selection-start-line="13" selection-end-line="14" />
+          <caret line="13" selection-start-line="12" selection-end-line="13" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
@@ -1005,13 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/RUN_CONSTANTS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/expr_calc/model_impl.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1022,14 +989,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/common/generator/data_bender.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/expr_calc/expr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        <state relative-caret-position="531">
+          <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-            <marker date="1536499581403" expanded="true" signature="1909:1918" ph="..." />
+            <marker date="1536502269418" expanded="true" signature="1806:1815" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/model_mgt_if.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/expr_calc/generator_impl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/generator_mgt_if.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/plugin_mgt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/mediation_mgt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/RUN_CONSTANTS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
         </state>
       </provider>
     </entry>

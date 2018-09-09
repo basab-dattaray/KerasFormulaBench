@@ -1,7 +1,6 @@
 from keras.models import model_from_json
-from common.misc.fileops import *
 from os.path import exists
-from common.misc.mediation_mgt import *
+from framework.mediation_mgt import *
 
 # from plugins.expr_calc.model_if import compile_model
 
