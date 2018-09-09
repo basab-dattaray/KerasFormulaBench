@@ -2,6 +2,7 @@ from __future__ import print_function
 from keras.models import Sequential
 from keras import layers
 from six.moves import range
+from apps.RUN_CONSTANTS import *
 
 
 from common.model.training_callback_mgt import *
@@ -30,7 +31,7 @@ def model(plugin_name):
         # nonlocal _x_train, _y_train,  _x_val, _y_val
         # _x_train, _x_val, _y_train, _y_val = data_breaker(inputs, labels)
         model = None
-        if is_model_usable(_abs_model_path):
+        if is_model_usable(_abs_model_path) and USE_EXISTING_MODEL:
             model = load_model(_abs_model_path)
 
             fn_compile_model(model)
@@ -40,7 +41,7 @@ def model(plugin_name):
             input_size = len(inputs[0])
             label_size = len(labels[0])
 
-            HIDDEN_SIZE = 256
+            HIDDEN_SIZE = 128
             # BATCH_SIZE = 128
             NUM_OF_HIDDEN_LAYERS = 1
             print('Build _model...')

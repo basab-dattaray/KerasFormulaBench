@@ -1,5 +1,7 @@
 from common.generator.data_bender import *
 from common.misc.fileops import *
+import functools
+
 NUM_OF_INPUT_PARTS = 8
 
 from plugins.expr_calc.normalizer import *
@@ -8,11 +10,18 @@ def poly(plugin_name, coeff_arr):
     abs_path_to_json_scratch_file = None
 
     def fn_calc(digit):
-        digout = -20 - .15 * digit + .125 * (digit ** 2)
-        i = 0
-        for c in coeff_arr:
-            digout += coeff_arr[i]
-        return digout * 100
+        digout = -300 - 15 * digit + 12.5 * (digit **+2)
+
+        # digit = 575 * digout
+        # # i = 0
+        # # for c in coeff_arr:
+        # #     digout += coeff_arr[i]
+        # # digit = digout *  100
+        # #
+        # s = functools.reduce(lambda a, b: a + b, coeff_arr, 0)
+        # digit2 = digout * s * 100
+
+        return digout
 
     def fn_generate_data(num_samples):
         nonlocal  abs_path_to_json_scratch_file

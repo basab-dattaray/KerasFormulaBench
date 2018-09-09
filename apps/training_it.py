@@ -16,7 +16,7 @@ def goodbye():
 plugin_name, fn_get_data, fn_generate_data_given_input_strings,fn_setup_model, fn_compile_model, fn_predict \
     = mediation_mgr()
 
-fn_train_model = training_mgr(plugin_name, NUM_OF_ITERATIONS)
+fn_train_model = training_mgr(plugin_name, NUM_ITERATIONS_FOR_SAVING_MODEL)
 
 
 def create_noisy_data():
