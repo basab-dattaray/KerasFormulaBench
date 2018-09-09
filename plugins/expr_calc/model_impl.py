@@ -26,10 +26,6 @@ def model(plugin_name):
     _abs_model_path = get_abs_path('plugins/' + plugin_name + '/model_data/model')
 
     def fn_setup_model(inputs, labels):
-
-        # nonlocal _model
-        # nonlocal _x_train, _y_train,  _x_val, _y_val
-        # _x_train, _x_val, _y_train, _y_val = data_breaker(inputs, labels)
         model = None
         if is_model_usable(_abs_model_path) and USE_EXISTING_MODEL:
             model = load_model(_abs_model_path)

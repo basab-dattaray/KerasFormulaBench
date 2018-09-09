@@ -1,14 +1,17 @@
-from plugins.expr_calc.expr import *
+from common.generator.formula_helper.poly_mgt import *
 
 def generate(plugin_name):
 
 
     fn_generate_data = None
     fn_generate_data_given_input_strings = None
+    expr = 'x: -300 - 15 * x + 12.5 * (x **+2)'
+    fn_calc = eval("lambda " + expr)
 
     def init():
         nonlocal  fn_generate_data, fn_generate_data_given_input_strings
-        fn_generate_data, fn_generate_data_given_input_strings = poly(plugin_name)
+        nonlocal  fn_calc
+        fn_generate_data, fn_generate_data_given_input_strings = poly(plugin_name, fn_calc)
 
     def fn_get_data(num_samples):
         nonlocal fn_generate_data

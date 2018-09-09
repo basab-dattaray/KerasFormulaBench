@@ -1,10 +1,10 @@
 from common.misc.fileops import *
 import  importlib
 
-from plugins.constants import *
+# from plugins.constants import *
 
 PLUGIN_KEY = "plugin_key"
-
+PLUGINS = 'plugins'
 def plugin_mgr():
 
     _plug_name = None

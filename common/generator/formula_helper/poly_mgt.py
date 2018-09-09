@@ -1,18 +1,14 @@
-from common.generator.data_bender import *
-from common.misc.fileops import *
-import functools
-
 NUM_OF_INPUT_PARTS = 8
 
-from plugins.expr_calc.normalizer import *
+from common.generator.normalizer import *
 
-def poly(plugin_name):
+def poly(plugin_name, fn_calc):
     abs_path_to_json_scratch_file = None
 
-    def fn_calc(digit):
-        digout = -300 - 15 * digit + 12.5 * (digit **+2)
-
-        return digout
+    # def fn_calc(digit):
+    #     digout = -300 - 15 * digit + 12.5 * (digit **+2)
+    #
+    #     return digout
 
     def fn_generate_data_given_input_strings_impl(string_of_inputs):
         maxlen_inputs, maxlen_labels = get_sizes(abs_path_to_json_scratch_file)
