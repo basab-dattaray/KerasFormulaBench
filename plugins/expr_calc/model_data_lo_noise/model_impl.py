@@ -19,7 +19,7 @@ def model(plugin_name):
         input_size = len(inputs[0])
         label_size = len(labels[0])
 
-        HIDDEN_SIZE = 256
+        HIDDEN_SIZE = 128
         # BATCH_SIZE = 128
         NUM_OF_HIDDEN_LAYERS = 1
         print('Build _model...')

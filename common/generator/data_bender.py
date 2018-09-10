@@ -1,5 +1,9 @@
 
 from common.misc.character_mgt import chars, ctable
+
+from common.misc.chr_mgt import *
+
+
 import numpy as np
 
 def get_maxlen_of_listitems(datalist):
@@ -28,6 +32,8 @@ def normalize_string(s, maxsize):
 def vectorize(questions, expected):
     print('Total addition questions:', len(questions))
     print('Vectorization...')
+    
+    fn_encode_chr, _ = chr_mgr()
 
     question_length = None
     expected_length = None
@@ -38,9 +44,9 @@ def vectorize(questions, expected):
     x = np.zeros((len(questions), question_length, len(chars)), dtype=np.bool)
     y = np.zeros((len(questions), expected_length, len(chars)), dtype=np.bool)
     for i, sentence in enumerate(questions):
-        x[i] = ctable.encode(sentence, question_length)
+        x[i] = fn_encode_chr(sentence, question_length)
     for i, sentence in enumerate(expected):
-        y[i] = ctable.encode(sentence, expected_length)
+        y[i] = fn_encode_chr(sentence, expected_length)
 
     return x, y
 
