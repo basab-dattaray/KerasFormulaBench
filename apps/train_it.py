@@ -45,6 +45,6 @@ while iteration_num  < NUM_OF_ITERATIONS and loop_count <= MAX_LOOP_COUNT:
     print()
     inputs, labels = create_noisy_data()
 
-x = 8
+
 
 
