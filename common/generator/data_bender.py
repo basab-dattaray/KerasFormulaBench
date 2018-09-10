@@ -29,45 +29,42 @@ def normalize_string(s, maxsize):
     return new_s
 
 
-def vectorize(questions, expected):
-    print('Total addition questions:', len(questions))
-    print('Vectorization...')
+def vectorize(input_strings, label_strings):
     
     fn_encode_chr, _, character_array = chr_mgr()
 
-    question_length = None
-    expected_length = None
-    if (len(questions) > 0): # same len as labels
-        question_length = len(questions[0])
-        expected_length = len(expected[0])
+    input_width = None
+    label_width = None
+    if (len(input_strings) > 0): # same len as labels
+        input_width = len(input_strings[0])
+        label_width = len(label_strings[0])
 
-    x = np.zeros((len(questions), question_length, len(character_array)), dtype=np.bool)
-    y = np.zeros((len(questions), expected_length, len(character_array)), dtype=np.bool)
-    for i, sentence in enumerate(questions):
-        x[i] = fn_encode_chr(sentence, question_length)
-    for i, sentence in enumerate(expected):
-        y[i] = fn_encode_chr(sentence, expected_length)
+    one_hot_inp_strings = np.zeros((len(input_strings), input_width, len(character_array)), dtype=np.bool)
+    one_hot_labels = np.zeros((len(input_strings), label_width, len(character_array)), dtype=np.bool)
+    for i, str in enumerate(input_strings):
+        one_hot_inp_strings[i] = fn_encode_chr(str, input_width)
+    for i, str in enumerate(label_strings):
+        one_hot_labels[i] = fn_encode_chr(str, label_width)
 
-    return x, y
+    return one_hot_inp_strings, one_hot_labels
 
 def data_breaker(inputs, labels):
 
-    x, y = vectorize(inputs, labels)
-    # Shuffle (x, y) in unison as the later parts of x will almost all be larger
-    # digits.
-    indices = np.arange(len(y))
+    one_hot_inputs, one_hot_labels = vectorize(inputs, labels)
+
+    indices = np.arange(len(one_hot_labels))
     np.random.shuffle(indices)
-    x = x[indices]
-    y = y[indices]
-    # Explicitly set apart 10% for validation data that we never train over.
-    split_at = len(x) - len(x) // 10
-    (x_train, x_val) = x[:split_at], x[split_at:]
-    (y_train, y_val) = y[:split_at], y[split_at:]
+    one_hot_inputs = one_hot_inputs[indices]
+    one_hot_labels = one_hot_labels[indices]
+
+    split_at = len(one_hot_inputs) - len(one_hot_inputs) // 10
+    (inputs_train, inputs_val) = one_hot_inputs[:split_at], one_hot_inputs[split_at:]
+    (labels_train, labels_val) = one_hot_labels[:split_at], one_hot_labels[split_at:]
     print('Training Data:')
-    print(x_train.shape)
-    print(y_train.shape)
+    print(inputs_train.shape)
+    print(labels_train.shape)
     print('Validation Data:')
-    print(x_val.shape)
-    print(y_val.shape)
-    return (x_train, x_val, y_train, y_val)
+    print(inputs_val.shape)
+    print(labels_val.shape)
+    return (inputs_train, inputs_val, labels_train, labels_val)
 
