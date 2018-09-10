@@ -1,14 +1,14 @@
 import numpy as np
 
 def chr_mgr():
-    chars = '0123456789+-&| '
-    char_indices = dict((c, i) for i, c in enumerate(chars))
-    indices_char = dict((i, c) for i, c in enumerate(chars))
+    character_array = '0123456789+-&| '
+    char_indices = dict((c, i) for i, c in enumerate(character_array))
+    indices_char = dict((i, c) for i, c in enumerate(character_array))
 
 
     def fn_encode_chr(in_str, num_rows):
 
-        one_hot_encoding = np.zeros((num_rows, len(chars)))
+        one_hot_encoding = np.zeros((num_rows, len(character_array)))
 
         # y = list(map) [zip(i, c) for i, c in enumerate(in_str)]
 
@@ -33,4 +33,4 @@ def chr_mgr():
 
 # ctable = CharacterTable(chars)
 
-    return fn_encode_chr, fn_decode_chr
+    return fn_encode_chr, fn_decode_chr, character_array

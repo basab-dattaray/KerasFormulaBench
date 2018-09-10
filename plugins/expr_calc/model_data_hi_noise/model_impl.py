@@ -1,8 +1,5 @@
-
 from keras.models import Sequential
 from keras import layers
-
-from common.misc.chr_mgt import *
 
 def model(plugin_name):
 
@@ -11,8 +8,6 @@ def model(plugin_name):
 
     _batch_size = None
     _num_of_epochs = None
-
-    _ , _, char_array = chr_mgr()
 
 
     def fn_setup_model(inputs, labels):
@@ -27,7 +22,7 @@ def model(plugin_name):
         # "Encode" the input sequence using an RNN, producing an output of HIDDEN_SIZE.
         # Note: In a situation where your input sequences have a variable length,
         # use input_shape=(None, num_feature).
-        model.add(layers.LSTM(HIDDEN_SIZE, input_shape=(input_size, len(char_array))))
+        model.add(layers.LSTM(HIDDEN_SIZE, input_shape=(input_size, len(chars))))
         # As the decoder RNN's input, repeatedly provide with the last hidden state of
         # RNN for each time step. Repeat 'NUM_OF_DIGITS_IN_OPERAND + 1' times as that's the maximum
         # length of output, e.g., when NUM_OF_DIGITS_IN_OPERAND=3, max output is 999+999=1998.
@@ -42,7 +37,7 @@ def model(plugin_name):
             model.add(layers.LSTM(HIDDEN_SIZE, return_sequences=True))
         # Apply a dense layer to the every temporal slice of an input. For each of step
         # of the output sequence, decide which character should be chosen.
-        model.add(layers.TimeDistributed(layers.Dense(len(char_array))))
+        model.add(layers.TimeDistributed(layers.Dense(len(chars))))
         model.add(layers.Activation('softmax'))
         fn_compile_model(model)
         model.summary()

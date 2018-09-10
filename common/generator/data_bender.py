@@ -1,5 +1,5 @@
 
-from common.misc.character_mgt import chars, ctable
+# from common.misc.character_mgt import chars, ctable
 
 from common.misc.chr_mgt import *
 
@@ -33,7 +33,7 @@ def vectorize(questions, expected):
     print('Total addition questions:', len(questions))
     print('Vectorization...')
     
-    fn_encode_chr, _ = chr_mgr()
+    fn_encode_chr, _, character_array = chr_mgr()
 
     question_length = None
     expected_length = None
@@ -41,8 +41,8 @@ def vectorize(questions, expected):
         question_length = len(questions[0])
         expected_length = len(expected[0])
 
-    x = np.zeros((len(questions), question_length, len(chars)), dtype=np.bool)
-    y = np.zeros((len(questions), expected_length, len(chars)), dtype=np.bool)
+    x = np.zeros((len(questions), question_length, len(character_array)), dtype=np.bool)
+    y = np.zeros((len(questions), expected_length, len(character_array)), dtype=np.bool)
     for i, sentence in enumerate(questions):
         x[i] = fn_encode_chr(sentence, question_length)
     for i, sentence in enumerate(expected):

@@ -28,7 +28,7 @@ def create_model_validator(questions, labels):
             # print(guess)
             print()
 
-    fn_encode_chr, fn_decode_chr = chr_mgr()
+    _, fn_decode_chr, _ = chr_mgr()
 
     x_val, y_val = vectorize(questions, labels)
 
