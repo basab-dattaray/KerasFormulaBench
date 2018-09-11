@@ -2,7 +2,7 @@ NUM_OF_INPUT_PARTS = 8
 
 from common.generator.normalizer import *
 
-def poly(plugin_name, fn_calc):
+def poly(plugin_name, fn_calc, input_width, label_width):
     abs_path_to_json_scratch_file = None
 
     # def fn_calc(digit):
@@ -11,7 +11,7 @@ def poly(plugin_name, fn_calc):
     #     return digout
 
     def fn_generate_data_given_input_strings_impl(string_of_inputs):
-        maxlen_inputs, maxlen_labels = get_sizes(abs_path_to_json_scratch_file)
+        maxlen_inputs, maxlen_labels = load_char_widths(abs_path_to_json_scratch_file)
 
         trimmed_input_strings = list( map(lambda s: s.strip(), string_of_inputs))
         fn_iterate = workit_file_generator_mgr(trimmed_input_strings)
@@ -27,12 +27,12 @@ def poly(plugin_name, fn_calc):
         nonlocal  abs_path_to_json_scratch_file
         inputs, outputs = generate_data_from_random_numbers(num_samples)
 
-        maxlen_inputs = get_maxlen_of_listitems(inputs)
-        maxlen_labels = get_maxlen_of_listitems(outputs)
+        input_width = get_maxlen_of_listitems(inputs)
+        label_width = get_maxlen_of_listitems(outputs)
 
-        inputs, labels = normalize_sizes(inputs, maxlen_inputs, maxlen_labels, outputs)
+        inputs, labels = normalize_sizes(inputs, input_width, label_width, outputs)
 
-        save_sizes(abs_path_to_json_scratch_file, maxlen_inputs, maxlen_labels)
+        save_char_widths(abs_path_to_json_scratch_file, input_width, label_width)
 
         return (inputs, labels)
 

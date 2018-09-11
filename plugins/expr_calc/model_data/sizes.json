@@ -1,4 +1,4 @@
 {
-    "maxlen_inputs": 8,
-    "maxlen_labels": 5
+    "INPUT_WIDTH": 8,
+    "LABEL_WIDTH": 5
 }

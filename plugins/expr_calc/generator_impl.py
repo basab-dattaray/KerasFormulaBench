@@ -1,5 +1,5 @@
 from common.generator.formula_helper.poly_mgt import *
-
+from plugins.expr_calc.CONFIG import *
 def generate(plugin_name):
 
 
@@ -19,7 +19,7 @@ def generate(plugin_name):
     def init():
         nonlocal  fn_generate_data, fn_generate_data_given_input_strings
         nonlocal  fn_calc
-        fn_generate_data, fn_generate_data_given_input_strings = poly(plugin_name, fn_calc)
+        fn_generate_data, fn_generate_data_given_input_strings = poly(plugin_name, fn_calc, INPUT_WIDTH, LABEL_WIDTH)
 
     def fn_get_data(num_samples):
         nonlocal fn_generate_data
