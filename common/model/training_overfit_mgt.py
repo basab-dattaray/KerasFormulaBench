@@ -2,7 +2,7 @@ from apps.MODEL_MGT_PARAMS import *
 from common.model.loss_mgt import *
 from common.misc.RollingBuffer import *
 from common.model.model_storage import *
-from common.render.print_colors import *
+from common.render.color_ref import *
 import sys
 
 def overfit_mgr(fn_stop_training, model, plugin_name):
@@ -36,9 +36,9 @@ def overfit_mgr(fn_stop_training, model, plugin_name):
 
 
         if val_loss_direction <= 0:
-            print(colors.ok + '>>> PROGRESS >>>' + colors.close, end=' ')
+            print(colors.green + '>>> PROGRESS >>>' + colors.close, end=' ')
         else:
-            print(colors.fail + '<<< REGRESS <<<' + colors.close, end=' ')
+            print(colors.red + '<<< REGRESS <<<' + colors.close, end=' ')
 
         print('val_loss => {}::    DIRECTION => {} and CHANGED_DIRECTION => {}'.format(val_loss, val_loss_direction, changed_val_loss_direction))
 
