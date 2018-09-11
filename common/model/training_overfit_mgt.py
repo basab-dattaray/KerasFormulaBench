@@ -1,4 +1,4 @@
-from apps.MODEL_MGT_PARAMS import *
+from plugins.expr_calc.config.MODEL_MGT_PARAMS import *
 from common.model.loss_mgt import *
 from common.misc.RollingBuffer import *
 from common.model.model_storage import *

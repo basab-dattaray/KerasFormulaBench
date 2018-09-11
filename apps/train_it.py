@@ -3,7 +3,7 @@ from __future__ import print_function
 from common.model.training_mgt import *
 
 from framework.mediation_mgt import *
-from apps.RUN_CONSTANTS import *
+from plugins.expr_calc.config.RUN_CONSTANTS import *
 from common.generator.noise_mgt import *
 
 import atexit

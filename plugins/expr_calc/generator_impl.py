@@ -1,12 +1,12 @@
 from common.generator.formula_helper.poly_mgt import *
-from plugins.expr_calc.CONFIG import *
+from plugins.expr_calc.config.CONFIG import *
 def generate(plugin_name):
 
 
     fn_generate_data = None
     fn_generate_data_given_input_strings = None
 
-    abs_expr_file_path = get_abs_path('plugins/' + plugin_name + '/FORMULA.TXT')
+    abs_expr_file_path = get_abs_path('plugins/' + plugin_name + '/config' '/FORMULA.TXT')
     formulas = get_lines_from_file(abs_expr_file_path)
     expr = None
     if len(formulas) > 0:

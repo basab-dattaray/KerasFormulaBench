@@ -31,6 +31,8 @@ def model(plugin_name):
 
         model.add(layers.LSTM(HIDDEN_SIZE, return_sequences=True))
 
+        model.add(layers.LSTM(HIDDEN_SIZE, return_sequences=True))
+
         model.add(layers.TimeDistributed(layers.Dense(len(char_array))))
 
         model.add(layers.Activation('softmax'))
