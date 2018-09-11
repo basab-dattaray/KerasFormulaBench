@@ -2,13 +2,9 @@ NUM_OF_INPUT_PARTS = 8
 
 from common.generator.normalizer import *
 
-def poly(plugin_name, fn_calc, input_width, label_width):
+def poly(plugin_name, fn_calc, max_input_width, max_label_width):
     abs_path_to_json_scratch_file = None
 
-    # def fn_calc(digit):
-    #     digout = -300 - 15 * digit + 12.5 * (digit **+2)
-    #
-    #     return digout
 
     def fn_generate_data_given_input_strings_impl(string_of_inputs):
         maxlen_inputs, maxlen_labels = load_char_widths(abs_path_to_json_scratch_file)
@@ -27,8 +23,13 @@ def poly(plugin_name, fn_calc, input_width, label_width):
         nonlocal  abs_path_to_json_scratch_file
         inputs, outputs = generate_data_from_random_numbers(num_samples)
 
-        input_width = get_maxlen_of_listitems(inputs)
-        label_width = get_maxlen_of_listitems(outputs)
+        input_width = get_max_width_of_list_items(inputs)
+        if max_input_width > 0:
+            input_width = max_input_width
+
+        label_width = get_max_width_of_list_items(outputs)
+        if max_label_width > 0:
+            label_width = max_label_width
 
         inputs, labels = normalize_sizes(inputs, input_width, label_width, outputs)
 

@@ -6,26 +6,26 @@ from common.misc.chr_mgt import *
 
 import numpy as np
 
-def get_maxlen_of_listitems(datalist):
+def get_max_width_of_list_items(datalist):
     max_len = 0
     for data_item in datalist:
         if len(data_item) > max_len:
             max_len = len(data_item)
     return max_len
 
-def normalize_list_of_strings(datalist, maxsize):
+def normalize_list_of_strings(datalist, char_width):
     result = []
     for s in datalist:
-        new_s = normalize_string( s, maxsize)
+        new_s = normalize_string(s, char_width)
         result.append(new_s)
     return result
 
 
-def normalize_string(s, maxsize):
+def normalize_string(s, char_width):
     s_len = len(s)
     new_s = s
-    if s_len < maxsize:
-        new_s = s + ' ' * (maxsize - s_len)
+    if s_len < char_width:
+        new_s = s + ' ' * (char_width - s_len)
     return new_s
 
 

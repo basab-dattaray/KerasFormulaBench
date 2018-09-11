@@ -9,6 +9,7 @@ def is_model_usable(path):
         return False
     if not exists(path + '.h5'):
         return False
+    # bare_path = path.rspit('model', 2)[0]
     return True
 
 def save_model(path, model):
