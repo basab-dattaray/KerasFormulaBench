@@ -14,6 +14,7 @@ def model(plugin_name):
 
     _ , _, char_array = chr_mgr()
 
+    rnn = layers.LSTM
 
     def fn_setup_model(inputs, labels):
         input_size = len(inputs[0])
@@ -25,13 +26,13 @@ def model(plugin_name):
 
         model = Sequential()
 
-        model.add(layers.LSTM(HIDDEN_SIZE, input_shape=(input_size, len(char_array))))
+        model.add(rnn(HIDDEN_SIZE, input_shape=(input_size, len(char_array))))
 
         model.add(layers.RepeatVector(label_size))
 
-        model.add(layers.LSTM(HIDDEN_SIZE, return_sequences=True))
+        model.add(rnn(HIDDEN_SIZE, return_sequences=True))
 
-        model.add(layers.LSTM(HIDDEN_SIZE, return_sequences=True))
+        model.add(rnn(HIDDEN_SIZE, return_sequences=True))
 
         model.add(layers.TimeDistributed(layers.Dense(len(char_array))))
 
