@@ -26,7 +26,7 @@ def save_model(path, model):
         json_file.write(model_json)
     # serialize weights to HDF5
     model.save_weights(path + ".h5")
-    print("Saved model to disk")
+    # print("Saved model to disk")
 
 
 def load_model(path):

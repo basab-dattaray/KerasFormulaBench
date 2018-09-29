@@ -1,4 +1,4 @@
-from common.misc.fileops import *
+from common.render.color_ref import *
 from common.model.training_callback_mgt import *
 from common.generator.data_bender import *
 
@@ -39,7 +39,6 @@ def training_mgr(plugin_name, save_after_n_iterations):
         for iteration in range(current_iteration, total_num_of_iterations + 1):
 
             if (_stop_running):
-                _stop_running = False
                 break
                 # pass
             print()
@@ -53,8 +52,15 @@ def training_mgr(plugin_name, save_after_n_iterations):
                       verbose=2)
             if iteration > 0 and iteration % save_after_n_iterations == 0:
                 save_model(_abs_model_path, model)
-                print('saved model after {} iterations'.format(iteration))
+                print(colors.blue + 'saved model after {} iterations'.format(iteration) + colors.close, end=' ')
+
         save_model(_abs_model_path, model)
-        print('saved model, normal termination')
+        if _stop_running == False:
+            print(colors.blue + 'saved model, training complete' + colors.close, end=' ')
+        else:
+            print(colors.blue + 'saved model, regressing due to over fitting so start training afresh' + colors.close, end=' ')
+            _stop_running = False
+
+
         return iteration
     return fn_train_model
